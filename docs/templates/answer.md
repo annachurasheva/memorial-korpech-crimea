@@ -1,4 +1,4 @@
-<!-- ФАЙЛ: docs/templates/answer.md -->
+<!-- ФАЙЛ: docs/templates/answer.md  -->
 <!-- ШАБЛОН: ответ руководителя. Копируется в docs/answers/answer-to-<id>-<theme>.md -->
 
 # answer-to-<id>-<theme>
