@@ -14,7 +14,7 @@ export const themeConfig: ThemeConfig = {
     // author name
     author: 'Anna Churasheva',
     // site url
-    url: 'https://astro-blog.edgeone.dev',
+    url: 'https://memorial-korpech-crimea.edgeone.dev',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
