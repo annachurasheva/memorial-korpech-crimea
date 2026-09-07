@@ -46,7 +46,7 @@ export default defineConfig({
       injectReset: true,
     }),
     mdx(),
-    ...(themeConfig.seo.googleAnalyticsID || themeConfig.seo.umamiAnalyticsID
+    ...(themeConfig.seo?.googleAnalyticsID || themeConfig.seo?.umamiAnalyticsID
       ? [
           partytown({
             config: {
