@@ -122,7 +122,7 @@ export const themeConfig: ThemeConfig = {
   // SEO SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   seo: {
     twitterID: '@Anna_Churasheva',
-    verification: { google: '', bing: '', yandex: '', baidu: '' },
+    verification: { google: '8Btc90peyNYEBLjKS3oKpWTwWmYy_dSqqS_SubxSZr0', bing: '', yandex: '5e9b80a83d907f46', baidu: '' },
     googleAnalyticsID: '',
     umamiAnalyticsID: '',
   },

@@ -46,11 +46,15 @@ export default defineConfig({
       injectReset: true,
     }),
     mdx(),
-    partytown({
-      config: {
-        forward: ['dataLayer.push', 'gtag'],
-      },
-    }),
+    ...(themeConfig.seo.googleAnalyticsID || themeConfig.seo.umamiAnalyticsID
+      ? [
+          partytown({
+            config: {
+              forward: ['dataLayer.push', 'gtag'],
+            },
+          }),
+        ]
+      : []),
     sitemap(),
     Compress({
       CSS: true,
