@@ -5,7 +5,8 @@ import { themeConfig } from '@/config'
 import { getPostDescription } from '@/utils/description'
 
 // eslint-disable-next-line antfu/no-top-level-await
-const posts = await getCollection('posts')
+const posts = (await getCollection('posts'))
+  .filter(post => import.meta.env.DEV || !post.data.draft)
 
 // Create slug-to-metadata lookup object for blog posts
 type PageEntry = { title: string, description: string }
