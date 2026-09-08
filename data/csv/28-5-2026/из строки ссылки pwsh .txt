@@ -1,0 +1,155 @@
+для поиска в консоле 
+
+===
+// Собираем все элементы, у которых есть атрибут id_common
+const items = [...document.querySelectorAll('[id_common]')];
+
+// Преобразуем в удобный массив объектов
+const result = items.map(el => ({
+    id_common: el.getAttribute('id_common'),
+    name: el.innerText.trim()
+}));
+
+console.log("Найдено записей:", result.length);
+console.log(result);
+
+// Если нужны только id_common:
+console.log("Только id_common:");
+console.log(result.map(r => r.id_common));
+
+===
+
+
+# pwsh
+(Get-Content 'id_658_Арма-Эли.txt' -Raw) -split ',' |
+    ForEach-Object { $_.Trim().Trim("'") } |
+    Where-Object { $_ } |
+    ForEach-Object { "https://obd-memorial.ru/html/info.htm?id=$_" } |
+    Set-Content 'links_id_658_Арма-Эли.txt' -Encoding UTF8
+
+
+id_160_Огуз-Тобе.txt
+
+(Get-Content 'id_160_Огуз-Тобе.txt' -Raw) -split ',' |
+    ForEach-Object { $_.Trim().Trim("'") } |
+    Where-Object { $_ } |
+    ForEach-Object { "https://obd-memorial.ru/html/info.htm?id=$_" } |
+    Set-Content 'links_id_160_Огуз-Тобе.txt' -Encoding UTF8
+	
+id_выс_66_3__404_СД.txt	
+
+(Get-Content 'id_выс_66_3__404_СД.txt' -Raw) -split ',' |
+    ForEach-Object { $_.Trim().Trim("'") } |
+    Where-Object { $_ } |
+    ForEach-Object { "https://obd-memorial.ru/html/info.htm?id=$_" } |
+    Set-Content 'links_id_выс_66_3__404_СД.txt' -Encoding UTF8
+	
+id_Крымская_АССР_выс_66_3_.txt	
+
+(Get-Content 'id_Крымская_АССР_выс_66_3_.txt' -Raw) -split ',' |
+    ForEach-Object { $_.Trim().Trim("'") } |
+    Where-Object { $_ } |
+    ForEach-Object { "https://obd-memorial.ru/html/info.htm?id=$_" } |
+    Set-Content 'links_id_Крымская_АССР_выс_66_3_.txt' -Encoding UTF8
+	
+id_398_сд_03_1942_крым.txt
+
+(Get-Content 'id_398_сд_03_1942_крым.txt' -Raw) -split ',' |
+    ForEach-Object { $_.Trim().Trim("'") } |
+    Where-Object { $_ } |
+    ForEach-Object { "https://obd-memorial.ru/html/info.htm?id=$_" } |
+    Set-Content 'links_id_398_сд_03_1942_крым.txt' -Encoding UTF8
+
+===========Копирование в CSV через консоль (простой вариант) ======
+// Запустите этот код в консоли браузера (F12) на странице с результатами поиска
+function parseOBDPageToCSV() {
+    const results = [];
+    
+    // Находим все блоки с результатами
+    const items = document.querySelectorAll('.search-result__col-text-and-icons');
+    
+    items.forEach((item, index) => {
+        // ФИО
+        const nameSpan = item.querySelector('.search-result__col-name span');
+        let lastName = '', firstName = '', middleName = '';
+        if (nameSpan) {
+            const fullName = nameSpan.innerText.trim();
+            const nameParts = fullName.split(' ');
+            if (nameParts.length >= 3) {
+                lastName = nameParts[0];
+                firstName = nameParts[1];
+                middleName = nameParts[2];
+            } else if (nameParts.length === 2) {
+                lastName = nameParts[0];
+                firstName = nameParts[1];
+            } else {
+                lastName = fullName;
+            }
+        }
+        
+        // Дата рождения
+        const birthSpan = item.querySelector('.search-result__col-date-birth span');
+        const dateBirth = birthSpan ? birthSpan.innerText.trim() : '';
+        
+        // Место рождения (может быть в нескольких местах)
+        const placeSpan = item.querySelector('.search-result__col-place span');
+        let placeBirth = placeSpan ? placeSpan.innerText.trim() : '';
+        
+        // Дата смерти/выбытия
+        const deathSpan = item.querySelector('.search-result__col-date-out span');
+        const dateDeath = deathSpan ? deathSpan.innerText.trim() : '';
+        
+        // ID_common для primary_url
+        const summarySpan = item.querySelector('.searchResultSummary');
+        const idCommon = summarySpan ? summarySpan.getAttribute('id_common') : '';
+        const primaryUrl = idCommon ? `https://obd_memorial.ru/html/info.htm?id=${idCommon}` : '';
+        
+        results.push({
+            last_name: lastName,
+            first_name: firstName,
+            middle_name: middleName,
+            date_birth: dateBirth,
+            place_birth: placeBirth,
+            date_death: dateDeath,
+            primary_url: primaryUrl
+        });
+    });
+    
+    // Конвертируем в CSV
+    const headers = ['last_name', 'first_name', 'middle_name', 'date_birth', 'place_birth', 'date_death', 'primary_url'];
+    const csvRows = [headers.join(',')];
+    
+    results.forEach(person => {
+        const row = headers.map(header => {
+            let value = person[header] || '';
+            // Экранируем кавычки и оборачиваем в кавычки если есть запятые
+            if (value.includes(',') || value.includes('"') || value.includes('\n')) {
+                value = '"' + value.replace(/"/g, '""') + '"';
+            }
+            return value;
+        });
+        csvRows.push(row.join(','));
+    });
+    
+    // Выводим результат
+    const csvString = csvRows.join('\n');
+    console.log(csvString);
+    
+    // Создаем ссылку для скачивания
+    const blob = new Blob(["\uFEFF" + csvString], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.href = url;
+    link.setAttribute('download', 'obd_memorial_data.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    console.log(`\n✅ Обработано записей: ${results.length}`);
+    return results;
+}
+
+// Запускаем парсер
+parseOBDPageToCSV();
+========

@@ -1,0 +1,694 @@
+🚀 Запуск парсера OBD Memorial
+📄 Всего URL: 226, осталось обработать: 226
+📁 Результаты: C:\puppeteer-project\data\processed\logs\2026-06-02__parser_mem2026.csv
+📁 Результаты: C:\puppeteer-project\data\processed\logs\2026-06-02__other_mem2026_.csv
+📁 Лог сессии: C:\puppeteer-project\data\processed\logs\2026-06-02__session.log
+📁 Лог ошибок: C:\puppeteer-project\data\processed\logs\2026-06-02__errors.log
+
+[1/226] https://obd-memorial.ru/html/info.htm?id=551267195
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[2/226] https://obd-memorial.ru/html/info.htm?id=551267196
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[3/226] https://obd-memorial.ru/html/info.htm?id=551267199
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[4/226] https://obd-memorial.ru/html/info.htm?id=551267200
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[5/226] https://obd-memorial.ru/html/info.htm?id=551267203
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[6/226] https://obd-memorial.ru/html/info.htm?id=551267204
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[7/226] https://obd-memorial.ru/html/info.htm?id=551267207
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[8/226] https://obd-memorial.ru/html/info.htm?id=551267208
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[9/226] https://obd-memorial.ru/html/info.htm?id=551267215
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[10/226] https://obd-memorial.ru/html/info.htm?id=551267182
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[11/226] https://obd-memorial.ru/html/info.htm?id=551267197
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[12/226] https://obd-memorial.ru/html/info.htm?id=551267198
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[13/226] https://obd-memorial.ru/html/info.htm?id=551267201
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[14/226] https://obd-memorial.ru/html/info.htm?id=551267202
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[15/226] https://obd-memorial.ru/html/info.htm?id=551267205
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[16/226] https://obd-memorial.ru/html/info.htm?id=551267206
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[17/226] https://obd-memorial.ru/html/info.htm?id=551267217
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[18/226] https://obd-memorial.ru/html/info.htm?id=551198256
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[19/226] https://obd-memorial.ru/html/info.htm?id=551197287
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[20/226] https://obd-memorial.ru/html/info.htm?id=551197288
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[21/226] https://obd-memorial.ru/html/info.htm?id=551197291
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[22/226] https://obd-memorial.ru/html/info.htm?id=551198147
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[23/226] https://obd-memorial.ru/html/info.htm?id=551198148
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[24/226] https://obd-memorial.ru/html/info.htm?id=551198155
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[25/226] https://obd-memorial.ru/html/info.htm?id=551198156
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[26/226] https://obd-memorial.ru/html/info.htm?id=551198159
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[27/226] https://obd-memorial.ru/html/info.htm?id=551198163
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[28/226] https://obd-memorial.ru/html/info.htm?id=551198188
+   ⚠️  другое ("не указано") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[29/226] https://obd-memorial.ru/html/info.htm?id=551198199
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[30/226] https://obd-memorial.ru/html/info.htm?id=551198200
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[31/226] https://obd-memorial.ru/html/info.htm?id=551198204
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[32/226] https://obd-memorial.ru/html/info.htm?id=551198207
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[33/226] https://obd-memorial.ru/html/info.htm?id=551198208
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[34/226] https://obd-memorial.ru/html/info.htm?id=551198219
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[35/226] https://obd-memorial.ru/html/info.htm?id=551198220
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[36/226] https://obd-memorial.ru/html/info.htm?id=551198223
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[37/226] https://obd-memorial.ru/html/info.htm?id=551198224
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[38/226] https://obd-memorial.ru/html/info.htm?id=551198227
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[39/226] https://obd-memorial.ru/html/info.htm?id=551198228
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[40/226] https://obd-memorial.ru/html/info.htm?id=551198231
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[41/226] https://obd-memorial.ru/html/info.htm?id=551198232
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[42/226] https://obd-memorial.ru/html/info.htm?id=551198235
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[43/226] https://obd-memorial.ru/html/info.htm?id=551198236
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[44/226] https://obd-memorial.ru/html/info.htm?id=551198239
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[45/226] https://obd-memorial.ru/html/info.htm?id=551198240
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[46/226] https://obd-memorial.ru/html/info.htm?id=551198243
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[47/226] https://obd-memorial.ru/html/info.htm?id=551198244
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[48/226] https://obd-memorial.ru/html/info.htm?id=551198247
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[49/226] https://obd-memorial.ru/html/info.htm?id=551198248
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[50/226] https://obd-memorial.ru/html/info.htm?id=551198251
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+   💾 Промежуточное сохранение (50 обработано)...
+
+[51/226] https://obd-memorial.ru/html/info.htm?id=551198252
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[52/226] https://obd-memorial.ru/html/info.htm?id=551198255
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[53/226] https://obd-memorial.ru/html/info.htm?id=551198259
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[54/226] https://obd-memorial.ru/html/info.htm?id=551198260
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[55/226] https://obd-memorial.ru/html/info.htm?id=551198263
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[56/226] https://obd-memorial.ru/html/info.htm?id=551198264
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[57/226] https://obd-memorial.ru/html/info.htm?id=551200135
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[58/226] https://obd-memorial.ru/html/info.htm?id=551200136
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[59/226] https://obd-memorial.ru/html/info.htm?id=551200139
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[60/226] https://obd-memorial.ru/html/info.htm?id=551200140
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[61/226] https://obd-memorial.ru/html/info.htm?id=551200143
+   ⚠️  другое ("умер") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[62/226] https://obd-memorial.ru/html/info.htm?id=551200144
+   ⚠️  другое ("умер") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[63/226] https://obd-memorial.ru/html/info.htm?id=551200151
+   ⚠️  другое ("умер") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[64/226] https://obd-memorial.ru/html/info.htm?id=551200152
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[65/226] https://obd-memorial.ru/html/info.htm?id=551200155
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[66/226] https://obd-memorial.ru/html/info.htm?id=551200159
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[67/226] https://obd-memorial.ru/html/info.htm?id=551200160
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[68/226] https://obd-memorial.ru/html/info.htm?id=551200163
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[69/226] https://obd-memorial.ru/html/info.htm?id=551200164
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[70/226] https://obd-memorial.ru/html/info.htm?id=551200175
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[71/226] https://obd-memorial.ru/html/info.htm?id=551200176
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[72/226] https://obd-memorial.ru/html/info.htm?id=551200179
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[73/226] https://obd-memorial.ru/html/info.htm?id=551200180
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[74/226] https://obd-memorial.ru/html/info.htm?id=551200183
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[75/226] https://obd-memorial.ru/html/info.htm?id=551200184
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[76/226] https://obd-memorial.ru/html/info.htm?id=551200187
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[77/226] https://obd-memorial.ru/html/info.htm?id=551200188
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[78/226] https://obd-memorial.ru/html/info.htm?id=551267103
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[79/226] https://obd-memorial.ru/html/info.htm?id=551267104
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[80/226] https://obd-memorial.ru/html/info.htm?id=551267107
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[81/226] https://obd-memorial.ru/html/info.htm?id=551267108
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[82/226] https://obd-memorial.ru/html/info.htm?id=551267111
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[83/226] https://obd-memorial.ru/html/info.htm?id=551267112
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[84/226] https://obd-memorial.ru/html/info.htm?id=551267115
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[85/226] https://obd-memorial.ru/html/info.htm?id=551267116
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[86/226] https://obd-memorial.ru/html/info.htm?id=551267119
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[87/226] https://obd-memorial.ru/html/info.htm?id=551267120
+   ⚠️  другое ("умер от ран") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[88/226] https://obd-memorial.ru/html/info.htm?id=551267123
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[89/226] https://obd-memorial.ru/html/info.htm?id=551267124
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[90/226] https://obd-memorial.ru/html/info.htm?id=551267127
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[91/226] https://obd-memorial.ru/html/info.htm?id=551267128
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[92/226] https://obd-memorial.ru/html/info.htm?id=551267131
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[93/226] https://obd-memorial.ru/html/info.htm?id=551267132
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[94/226] https://obd-memorial.ru/html/info.htm?id=551267135
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[95/226] https://obd-memorial.ru/html/info.htm?id=551267136
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[96/226] https://obd-memorial.ru/html/info.htm?id=551267139
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[97/226] https://obd-memorial.ru/html/info.htm?id=551267140
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[98/226] https://obd-memorial.ru/html/info.htm?id=551267143
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[99/226] https://obd-memorial.ru/html/info.htm?id=551267144
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[100/226] https://obd-memorial.ru/html/info.htm?id=551267147
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+   💾 Промежуточное сохранение (100 обработано)...
+
+[101/226] https://obd-memorial.ru/html/info.htm?id=551267148
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[102/226] https://obd-memorial.ru/html/info.htm?id=551267152
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[103/226] https://obd-memorial.ru/html/info.htm?id=551267155
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[104/226] https://obd-memorial.ru/html/info.htm?id=551267156
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[105/226] https://obd-memorial.ru/html/info.htm?id=551267159
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[106/226] https://obd-memorial.ru/html/info.htm?id=551267160
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[107/226] https://obd-memorial.ru/html/info.htm?id=551267163
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[108/226] https://obd-memorial.ru/html/info.htm?id=551267164
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[109/226] https://obd-memorial.ru/html/info.htm?id=551267167
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[110/226] https://obd-memorial.ru/html/info.htm?id=551267168
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[111/226] https://obd-memorial.ru/html/info.htm?id=551267171
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[112/226] https://obd-memorial.ru/html/info.htm?id=551267172
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[113/226] https://obd-memorial.ru/html/info.htm?id=551267184
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[114/226] https://obd-memorial.ru/html/info.htm?id=551267187
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[115/226] https://obd-memorial.ru/html/info.htm?id=551267188
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[116/226] https://obd-memorial.ru/html/info.htm?id=551267191
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[117/226] https://obd-memorial.ru/html/info.htm?id=551267192
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[118/226] https://obd-memorial.ru/html/info.htm?id=551267216
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[119/226] https://obd-memorial.ru/html/info.htm?id=551268495
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[120/226] https://obd-memorial.ru/html/info.htm?id=551268501
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[121/226] https://obd-memorial.ru/html/info.htm?id=551843484
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[122/226] https://obd-memorial.ru/html/info.htm?id=551197286
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[123/226] https://obd-memorial.ru/html/info.htm?id=551197289
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[124/226] https://obd-memorial.ru/html/info.htm?id=551197290
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[125/226] https://obd-memorial.ru/html/info.htm?id=551198149
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[126/226] https://obd-memorial.ru/html/info.htm?id=551198157
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[127/226] https://obd-memorial.ru/html/info.htm?id=551198158
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[128/226] https://obd-memorial.ru/html/info.htm?id=551198161
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[129/226] https://obd-memorial.ru/html/info.htm?id=551198162
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[130/226] https://obd-memorial.ru/html/info.htm?id=551198197
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[131/226] https://obd-memorial.ru/html/info.htm?id=551198198
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[132/226] https://obd-memorial.ru/html/info.htm?id=551198201
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[133/226] https://obd-memorial.ru/html/info.htm?id=551198202
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[134/226] https://obd-memorial.ru/html/info.htm?id=551198205
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[135/226] https://obd-memorial.ru/html/info.htm?id=551198206
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[136/226] https://obd-memorial.ru/html/info.htm?id=551198221
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[137/226] https://obd-memorial.ru/html/info.htm?id=551198222
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[138/226] https://obd-memorial.ru/html/info.htm?id=551198225
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[139/226] https://obd-memorial.ru/html/info.htm?id=551198226
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[140/226] https://obd-memorial.ru/html/info.htm?id=551198229
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[141/226] https://obd-memorial.ru/html/info.htm?id=551198230
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[142/226] https://obd-memorial.ru/html/info.htm?id=551198233
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[143/226] https://obd-memorial.ru/html/info.htm?id=551198234
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[144/226] https://obd-memorial.ru/html/info.htm?id=551198237
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[145/226] https://obd-memorial.ru/html/info.htm?id=551198238
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[146/226] https://obd-memorial.ru/html/info.htm?id=551198241
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[147/226] https://obd-memorial.ru/html/info.htm?id=551198242
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[148/226] https://obd-memorial.ru/html/info.htm?id=551198245
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[149/226] https://obd-memorial.ru/html/info.htm?id=551198246
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[150/226] https://obd-memorial.ru/html/info.htm?id=551198249
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+   💾 Промежуточное сохранение (150 обработано)...
+
+[151/226] https://obd-memorial.ru/html/info.htm?id=551198250
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[152/226] https://obd-memorial.ru/html/info.htm?id=551198254
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[153/226] https://obd-memorial.ru/html/info.htm?id=551198257
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[154/226] https://obd-memorial.ru/html/info.htm?id=551198258
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[155/226] https://obd-memorial.ru/html/info.htm?id=551198261
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[156/226] https://obd-memorial.ru/html/info.htm?id=551198262
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[157/226] https://obd-memorial.ru/html/info.htm?id=551198269
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[158/226] https://obd-memorial.ru/html/info.htm?id=551198270
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[159/226] https://obd-memorial.ru/html/info.htm?id=551200137
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[160/226] https://obd-memorial.ru/html/info.htm?id=551200138
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[161/226] https://obd-memorial.ru/html/info.htm?id=551200141
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[162/226] https://obd-memorial.ru/html/info.htm?id=551200142
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[163/226] https://obd-memorial.ru/html/info.htm?id=551200153
+   ⚠️  другое ("умер") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[164/226] https://obd-memorial.ru/html/info.htm?id=551200154
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[165/226] https://obd-memorial.ru/html/info.htm?id=551200157
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[166/226] https://obd-memorial.ru/html/info.htm?id=551200158
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[167/226] https://obd-memorial.ru/html/info.htm?id=551200161
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[168/226] https://obd-memorial.ru/html/info.htm?id=551200162
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[169/226] https://obd-memorial.ru/html/info.htm?id=551200165
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[170/226] https://obd-memorial.ru/html/info.htm?id=551200174
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[171/226] https://obd-memorial.ru/html/info.htm?id=551200177
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[172/226] https://obd-memorial.ru/html/info.htm?id=551200178
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[173/226] https://obd-memorial.ru/html/info.htm?id=551200181
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[174/226] https://obd-memorial.ru/html/info.htm?id=551200182
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[175/226] https://obd-memorial.ru/html/info.htm?id=551200185
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[176/226] https://obd-memorial.ru/html/info.htm?id=551200186
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[177/226] https://obd-memorial.ru/html/info.htm?id=551200189
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[178/226] https://obd-memorial.ru/html/info.htm?id=551200190
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[179/226] https://obd-memorial.ru/html/info.htm?id=551200202
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[180/226] https://obd-memorial.ru/html/info.htm?id=551267105
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[181/226] https://obd-memorial.ru/html/info.htm?id=551267106
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[182/226] https://obd-memorial.ru/html/info.htm?id=551267109
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[183/226] https://obd-memorial.ru/html/info.htm?id=551267110
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[184/226] https://obd-memorial.ru/html/info.htm?id=551267113
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[185/226] https://obd-memorial.ru/html/info.htm?id=551267114
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[186/226] https://obd-memorial.ru/html/info.htm?id=551267117
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[187/226] https://obd-memorial.ru/html/info.htm?id=551267118
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[188/226] https://obd-memorial.ru/html/info.htm?id=551267126
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[189/226] https://obd-memorial.ru/html/info.htm?id=551267129
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[190/226] https://obd-memorial.ru/html/info.htm?id=551267130
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[191/226] https://obd-memorial.ru/html/info.htm?id=551267133
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[192/226] https://obd-memorial.ru/html/info.htm?id=551267134
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[193/226] https://obd-memorial.ru/html/info.htm?id=551267137
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[194/226] https://obd-memorial.ru/html/info.htm?id=551267138
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[195/226] https://obd-memorial.ru/html/info.htm?id=551267141
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[196/226] https://obd-memorial.ru/html/info.htm?id=551267142
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[197/226] https://obd-memorial.ru/html/info.htm?id=551267145
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[198/226] https://obd-memorial.ru/html/info.htm?id=551267146
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[199/226] https://obd-memorial.ru/html/info.htm?id=551267149
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[200/226] https://obd-memorial.ru/html/info.htm?id=551267150
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+   💾 Промежуточное сохранение (200 обработано)...
+
+[201/226] https://obd-memorial.ru/html/info.htm?id=551267153
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[202/226] https://obd-memorial.ru/html/info.htm?id=551267154
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[203/226] https://obd-memorial.ru/html/info.htm?id=551267157
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[204/226] https://obd-memorial.ru/html/info.htm?id=551267158
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[205/226] https://obd-memorial.ru/html/info.htm?id=551267161
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[206/226] https://obd-memorial.ru/html/info.htm?id=551267162
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[207/226] https://obd-memorial.ru/html/info.htm?id=551267165
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[208/226] https://obd-memorial.ru/html/info.htm?id=551267166
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[209/226] https://obd-memorial.ru/html/info.htm?id=551267169
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[210/226] https://obd-memorial.ru/html/info.htm?id=551267170
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[211/226] https://obd-memorial.ru/html/info.htm?id=551267173
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[212/226] https://obd-memorial.ru/html/info.htm?id=551267174
+   ⚠️  другое ("пропал без вести") — добавлен в 2026-06-02__other_mem2026_.csv
+
+[213/226] https://obd-memorial.ru/html/info.htm?id=551267185
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[214/226] https://obd-memorial.ru/html/info.htm?id=551267186
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[215/226] https://obd-memorial.ru/html/info.htm?id=551267189
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[216/226] https://obd-memorial.ru/html/info.htm?id=551267190
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[217/226] https://obd-memorial.ru/html/info.htm?id=551267193
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[218/226] https://obd-memorial.ru/html/info.htm?id=551267194
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[219/226] https://obd-memorial.ru/html/info.htm?id=551267209
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[220/226] https://obd-memorial.ru/html/info.htm?id=551268489
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[221/226] https://obd-memorial.ru/html/info.htm?id=551268490
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[222/226] https://obd-memorial.ru/html/info.htm?id=551843485
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[223/226] https://obd-memorial.ru/html/info.htm?id=551267210
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[224/226] https://obd-memorial.ru/html/info.htm?id=551197275
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[225/226] https://obd-memorial.ru/html/info.htm?id=551200191
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+[226/226] https://obd-memorial.ru/html/info.htm?id=551197274
+   ✅ убит/погиб — добавлен в 2026-06-02__parser_mem2026.csv
+
+📊 Финальное сохранение результатов...
+   💾 2026-06-02__parser_mem2026.csv — 182 записей
+   💾 2026-06-02__other_mem2026_.csv — 44 записей
+
+✅ Готово!
