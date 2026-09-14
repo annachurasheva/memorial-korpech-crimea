@@ -1,3 +1,23 @@
 [
-  { "id": "KRP-0001", "date": "2026-09-15", "status": "pending" }
+  {
+    "id": "551267195",
+    "slug": "badalov-g-i-551267195",
+    "date": "2026-09-15",
+    "issue": "current_burial is empty",
+    "status": "pending"
+  },
+  {
+    "id": "551267196",
+    "slug": "lomanov-i-a-551267196",
+    "date": "2026-09-15",
+    "issue": "current_burial is empty",
+    "status": "pending"
+  },
+  {
+    "id": "551267199",
+    "slug": "mukhin-a-a-551267199",
+    "date": "2026-09-15",
+    "issue": "current_burial is empty",
+    "status": "pending"
+  }
 ]

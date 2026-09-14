@@ -35,4 +35,106 @@ const about = defineCollection({
   }),
 })
 
-export const collections = { posts, about }
+const fallen = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/fallen' }),
+  schema: z.object({
+    // required
+    id: z.string(),
+    slug: z.string(),
+    status: z.enum(['inbox', 'processed', 'rejected']),
+    description: z.string(),
+
+    // i18n (обязательно для многоязычности)
+    lang: z.enum(['', ...allLocales]).optional().default(''),
+
+    // person data
+    person: z.object({
+      last_name: z.string(),
+      first_name: z.string(),
+      middle_name: z.string().optional(),
+      birth_year: z.number().nullable(),
+      birth_location: z.string().optional(),
+      death_date: z.string(),
+      cause: z.string()
+    }),
+
+    // service data
+    service: z.object({
+      rank_raw: z.string(),
+      rank_norm: z.string(),
+      unit_raw: z.string(),
+      unit_norm: z.string(),
+      unit_id: z.string()
+    }),
+
+    // burial data
+    burial: z.object({
+      primary_norm: z.string(),
+      current_norm: z.string().optional(),
+      current_status: z.string().optional()
+    }),
+
+    // relatives (optional)
+    relatives: z.array(z.object({
+      name: z.string(),
+      address: z.string().optional(),
+      relationship: z.string().nullable()
+    })).optional(),
+
+    // identification
+    identification: z.object({
+      status: z.enum(['named', 'unnamed']),
+      source: z.string()
+    }),
+
+    // memorialization
+    memorialization: z.object({
+      status: z.enum(['pending', 'in-progress', 'completed', 'not-applicable']),
+      type: z.enum(['korpech-grave', 'korpech-plate', 'other-memorial', 'kerch-tribute']).nullable(),
+      location: z.string().optional(),
+      plate_number: z.string().optional(),
+      engraved: z.boolean(),
+      engraved_date: z.string().nullable(),
+      notes: z.string().optional()
+    }),
+
+    // awards (optional)
+    awards: z.array(z.object({
+      title: z.string(),
+      date: z.string().nullable(),
+      status: z.enum(['proposed', 'confirmed', 'awarded'])
+    })).optional(),
+
+    // photos
+    photo: z.array(z.string()).optional(),
+
+    // sources
+    sources: z.array(z.object({
+      org: z.string(),
+      url: z.string()
+    })),
+
+    // supplements (optional)
+    supplements: z.array(z.object({
+      org: z.string(),
+      data: z.string(),
+      status: z.enum(['queue', 'approved', 'declined'])
+    })).optional(),
+
+    // optional fields
+    admin_word: z.string().optional()
+  })
+})
+
+const memorials = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/memorials' }),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    location: z.string(),
+    status: z.enum(['active', 'inactive', 'planned']),
+    lang: z.enum(['', ...allLocales]).optional().default('')
+  })
+})
+
+export const collections = { posts, about, fallen, memorials }
