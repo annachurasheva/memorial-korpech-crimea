@@ -55,7 +55,10 @@
 ### Структура карточки (frontmatter)
 
 ```yaml
-id: KRP-0001 # вечный, канонический URL /memorial/card/KRP-0001
+id: '551267195' # document_id из ЦАМО (вечный)
+slug: petrov-v-v-551267195 # транслитерация ФИО + document_id (для URL)
+# Канонический URL: /memorial/card/petrov-v-v-551267195/
+# Правило: ФИО может уточняться, но slug никогда не меняется (иначе сломаются внешние ссылки)
 status: processed # inbox | processed | rejected
 admin_word: '' # зарезервированное первое слово Anna-Ch
 
@@ -91,10 +94,30 @@ identification:
   status: named # named | unnamed
   source: ЦАМО
 
-memorialized:
-  engraved: false
-  plate: null
-  date: null
+memorialization:
+  status: pending # pending | in-progress | completed | not-applicable
+  type: null # korpech-grave | korpech-plate | other-memorial | kerch-tribute
+
+  # Детали по типу:
+  # type: korpech-grave (600+ чётко захоронены в Корпечь)
+  #   location: "Мемориал Корпечь, сектор А, ряд 3"
+  #   plate_number: "A-3-15"
+
+  # type: korpech-plate (59 чётко присутствуют на существующих плитах)
+  #   plate_number: "Стела №2, строка 15"
+  #   verified: true
+
+  # type: other-memorial (перезахоронены в другом месте)
+  #   memorial_name: "Мемориал Ак-Монай"
+  #   memorial_id: null (связь со справочником /memorials/)
+
+  # type: kerch-tribute (плиты "Они воевали за Керчь" — не на могилах)
+  #   tribute_location: "Мемориал Керчь, аллея героев"
+  #   plate_number: "Стела памяти, сектор 5"
+
+  engraved: false # гравировка выполнена (да/нет/в процессе)
+  engraved_date: null
+  notes: '' # примечания (например, "ожидает переиздания мемориала")
 
 awards: [] # появляется только если что-то внесено
 
@@ -107,3 +130,61 @@ sources: # только указатель для зрителя
 
 supplements: [] # поисковые отряды, родня за рубежом
 ```
+
+### Структура карточки-new (frontmatter)
+
+---
+id: "551267195"
+slug: "badalov-g-i-551267195"
+status: processed
+admin_word: ""
+
+description: "Герой Бадалов Г.И. Мемориал павших — восстановим справедливость, высечем его ИМЯ на камне на вечно."
+
+person:
+  last_name: Бадалов
+  first_name: Григорий
+  middle_name: Иванович
+  birth_year: null
+  birth_location: "Азербайджанская ССР, г. Кадабек"
+  death_date: "1942-03-19"
+  cause: убит
+
+service:
+  rank_raw: политрук
+  rank_norm: Политрук
+  unit_raw: скф 398 сд 826 сп
+  unit_norm: СКФ 398 сд 826 сп
+  unit_id: unit-398-sd-826-sp
+
+burial:
+  primary_norm: крымская-асср-ленинский-р-н-с-корпечь
+  current_norm: мемориал-корпечь
+  current_status: "уточняется"
+
+relatives: []
+
+identification:
+  status: named
+  source: ЦАМО
+
+memorialization:
+  status: pending
+  type: korpech-grave
+  location: "Мемориал Корпечь, сектор Б, ряд 2"
+  plate_number: "Б-2-47"
+  engraved: false
+  engraved_date: null
+  notes: "Ожидает переиздания мемориала"
+
+awards: []
+
+photo:
+  - "/photos/551267195/photo1.jpg"
+
+sources:
+  - org: ОБД Мемориал
+    url: https://obd-memorial.ru/html/info.htm?id=551267195
+
+supplements: []
+---
