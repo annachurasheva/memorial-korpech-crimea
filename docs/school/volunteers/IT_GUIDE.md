@@ -14,4 +14,4 @@
 
 1. **Получить свежие данные:**
    ```bash
-   git pull origin qwen-memorial-coder
+   git pull origin qwen3-memorial

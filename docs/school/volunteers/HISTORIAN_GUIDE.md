@@ -66,7 +66,7 @@
 
 1. **Получить свежие данные:**
    ```bash
-   git pull origin qwen-memorial-coder
+   git pull origin qwen3-memorial
    ```
 2. **Установить зависимости (если проект скачан впервые):**
    ```bash
@@ -83,7 +83,7 @@
    ```bash
    git add data/dictionaries/ src/content/posts/memorial/
    git commit -m "chore: обновление словарей и генерация карточек [TASK-XXX]"
-   git push origin qwen-memorial-coder
+   git push origin qwen3-memorial
    ```
 
 ## 3. Правила работы с Git (Conventional Commits)

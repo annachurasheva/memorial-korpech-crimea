@@ -7,7 +7,7 @@
 
 ## Поле и репо
 Поле: memorial-korpech-crimea
-Ветка: qwen-memorial-coder
+Ветка: qwen3-memorial
 Роль: Кодер 2
 
 ## Постановка задачи
