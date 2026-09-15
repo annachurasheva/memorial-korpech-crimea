@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "units": {
+    "unit-398-sd": {
+      "dict_keys": ["СКФ 398 сд", "скф 398 сд"],
+      "type": "дивизия",
+      "number": 398,
+      "parent": null,
+      "children": ["unit-826-sp"],
+      "camo_url": null,
+      "formation": null,
+      "disband": null,
+      "status_note": null,
+      "reference_url": null,
+      "history_note": null
+    },
+    "unit-826-sp": {
+      "dict_keys": ["СКФ 826 сп 398 сд", "скф 398 сд 826 сп", "скф 826 полк 398 див.", "скф 826 сп 398 див."],
+      "type": "полк",
+      "number": 826,
+      "parent": "unit-398-sd",
+      "children": [],
+      "camo_url": "https://pamyat-naroda.ru/warunit/id4371/",
+      "formation": null,
+      "disband": null,
+      "status_note": null,
+      "reference_url": null,
+      "history_note": null
+    },
+    "unit-404-sd": {
+      "dict_keys": ["404 сд", "скф 404 сд 44 А", "СКФ 404 сд 44 А"],
+      "type": "дивизия",
+      "number": 404,
+      "parent": null,
+      "children": ["unit-643-sp"],
+      "camo_url": null,
+      "formation": null,
+      "disband": null,
+      "status_note": null,
+      "reference_url": "https://sourcecraft-dev-docs.blogspot.com/2026/09/404.html",
+      "history_note": "Сформирована в сентябре–октябре 1941 года на Закавказском фронте; в действующей армии с 01.12.1941. Подчинение: 44-я армия, 9-й стрелковый корпус, Крымский фронт. Уничтожена в майском разгроме Керчи (операция «Охота на дроф», 8–20.05.1942); расформирована 14.06.1942. Командиры: Мотовилов, Меньшиков, Куропатенко."
+    },
+    "unit-643-sp": {
+      "dict_keys": ["643 сп 404 сд", "СКФ 643 сп 404 сд"],
+      "type": "полк",
+      "number": 643,
+      "parent": "unit-404-sd",
+      "children": [],
+      "camo_url": null,
+      "formation": null,
+      "disband": null,
+      "status_note": null,
+      "reference_url": null,
+      "history_note": null
+    }
+  }
+}
