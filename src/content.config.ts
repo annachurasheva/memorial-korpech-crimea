@@ -36,7 +36,7 @@ const about = defineCollection({
 })
 
 const fallen = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/fallen' }),
+  loader: glob({ pattern: ['**/*.md', '!README.md'], base: './src/content/fallen' }),
   schema: z.object({
     // required
     id: z.string(),
@@ -129,7 +129,7 @@ const fallen = defineCollection({
 })
 
 const memorials = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/memorials' }),
+  loader: glob({ pattern: ['**/*.md', '!README.md'], base: './src/content/memorials' }),
   schema: z.object({
     id: z.string(),
     name: z.string(),

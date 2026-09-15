@@ -1,234 +1,129 @@
+ C:\astro-projects\memorial-korpech-crimea> pnpm astro check
+
+> memorial-korpech-crimea@1.0.0 astro C:\astro-projects\memorial-korpech-crimea
 > astro "check"
 
-17:07:36 [content] Syncing content
-17:07:36 [content] Content config changed
-17:07:36 [content] Clearing content store
-[InvalidContentEntryDataError] memorials → readme data does not match collection schema.
+18:18:28 [content] Syncing content
+18:18:28 [content] Content config changed
+18:18:28 [content] Clearing content store
+18:18:28 [WARN] [glob-loader] No files found matching "**/*.md,!README.md" in directory "src\content\memorials"
+18:18:28 [content] Synced content
+18:18:28 [types] Generated 3.47s
+18:18:28 [check] Getting diagnostics for Astro files in C:\astro-projects\memorial-korpech-crimea...
+scripts/csv-to-fallen.mjs:259:84 - warning ts(6385): '(from: number, length?: number | undefined): string' is deprecated.
 
-  id**: **id: Required
-  name**: **name: Required
-  location**: **location: Required
-  status: Invalid option: expected one of "active"|"inactive"|"planned"
+259       const id = row['document_id'] || `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+                                                                                       ~~~~~~
+scripts/csv-to-fallen.mjs:236:11 - warning ts(6133): 'needsReview' is declared but its value is never read.
 
-  Hint:
-    See https://docs.astro.build/en/guides/content-collections/ for more information on content schemas.
-  Error reference:
-    https://docs.astro.build/en/reference/errors/invalid-content-entry-data-error/
-  Location:
-    C:\astro-projects\memorial-korpech-crimea\src\content\memorials\README.md:0:0
-  Stack trace:
-    at getEntryData (C:\astro-projects\memorial-korpech-crimea\node_modules\.pnpm\astro@6.1.5_@types+node@25._6d0c47d141c1ea47b78a1edce0d9f0d9\node_modules\astro\dist\content\utils.js:122:16)
-    at async eval (C:\astro-projects\memorial-korpech-crimea\node_modules\.pnpm\astro@6.1.5_@types+node@25._6d0c47d141c1ea47b78a1edce0d9f0d9\node_modules\astro\dist\content\loaders\glob.js:211:13)
+236       let needsReview = false;
+              ~~~~~~~~~~~
+scripts/csv-to-fallen.mjs:46:159 - error ts(1005): ';' expected.
+
+46   const en = 'A-a-B-b-V-v-G-g-G-g-D-d-E-e-E-e-E-e-ZH-zh-Z-z-I-i-I-i-I-i-J-j-K-k-L-l-M-m-N-n-O-o-P-p-R-r-S-s-T-t-U-u-F-f-H-h-TS-ts-CH-ch-SH-sh-SCH-sch-''-Y-y-''-E-e-YU-yu-YA-ya-';
+                                                                                                                                                                 ~~~~~~~~~~~~~~~~~~~
+scripts/csv-to-fallen.mjs:46:152 - error ts(1005): ',' expected.
+
+46   const en = 'A-a-B-b-V-v-G-g-G-g-D-d-E-e-E-e-E-e-ZH-zh-Z-z-I-i-I-i-I-i-J-j-K-k-L-l-M-m-N-n-O-o-P-p-R-r-S-s-T-t-U-u-F-f-H-h-TS-ts-CH-ch-SH-sh-SCH-sch-''-Y-y-''-E-e-YU-yu-YA-ya-';
+                                                                                                                                                          ~~~~~~~
+scripts/csv-to-fallen.mjs:41:433 - error ts(1161): Unterminated regular expression literal.
+
+41 const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   ~~
+scripts/csv-to-fallen.mjs:41:432 - error ts(1005): ';' expected.
+
+41 const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~
+scripts/csv-to-fallen.mjs:41:420 - error ts(1134): Variable declaration expected.
+
+41 const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+                                                                                                                                                                                                                                                                                                                                                                                                                                      ~
+scripts/csv-to-fallen.mjs:41:419 - error ts(1134): Variable declaration expected.
+
+41 const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+                                                                                                                                                                                                                                                                                                                                                                                                                                     ~
+scripts/csv-to-fallen.mjs:41:418 - error ts(1127): Invalid character.
+
+41 const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+                                                                                                                                                                                                                                                                                                                                                                                                          
+scripts/csv-to-fallen.mjs:4:3 - error ts(1109): Expression expected.
+
+4 +++ scripts/csv-to-fallen.mjs (修改后)
+    ~
+scripts/csv-to-fallen.mjs:1:3 - error ts(1109): Expression expected.
+
+1 --- scripts/csv-to-fallen.mjs (原始)
+    ~
+
+scripts/csv-to-markdown.mjs:27:7 - warning ts(6133): 'FILES' is declared but its value is never read.
+
+27 const FILES = {
+         ~~~~~
+scripts/csv-to-markdown.mjs:13:1 - warning ts(6192): All imports in import declaration are unused.
+
+13 import { readdir, readFile, writeFile } from 'fs/promises';
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/memorial/CardFull.astro:12:60 - error ts(2339): Property 'photo' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+                                                              ~~~~~
+src/components/memorial/CardFull.astro:12:51 - error ts(2339): Property 'sources' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+                                                     ~~~~~~~
+src/components/memorial/CardFull.astro:12:34 - error ts(2339): Property 'memorialization' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+                                    ~~~~~~~~~~~~~~~
+src/components/memorial/CardFull.astro:12:26 - error ts(2339): Property 'burial' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+                            ~~~~~~
+src/components/memorial/CardFull.astro:12:17 - error ts(2339): Property 'service' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+                   ~~~~~~~
+src/components/memorial/CardFull.astro:12:9 - error ts(2339): Property 'person' does not exist on type 'unknown'.
+
+12 const { person, service, burial, memorialization, sources, photo } = data;
+           ~~~~~~
+
+src/components/memorial/CardSummary.astro:21:35 - error ts(18046): 'data' is of type 'unknown'.
+
+21 const cardUrl = `/memorial/card/${data.slug}/`;
+                                     ~~~~
+src/components/memorial/CardSummary.astro:12:17 - error ts(2339): Property 'burial' does not exist on type 'unknown'.
+
+12 const { person, burial } = data;
+                   ~~~~~~
+src/components/memorial/CardSummary.astro:12:9 - error ts(2339): Property 'person' does not exist on type 'unknown'.
+
+12 const { person, burial } = data;
+           ~~~~~~
+src/components/memorial/CardSummary.astro:15:7 - warning ts(6133): 'fullName' is declared but its value is never read.
+
+15 const fullName = `${person.last_name} ${person.first_name}${person.middle_name ? ' ' + person.middle_name : ''}`;
+         ~~~~~~~~
+
+src/pages/[...lang]/memorial/rss.xml.ts:27:13 - warning ts(6133): 'fullName' is declared but its value is never read.
+
+27       const fullName = `${card.data.person.last_name} ${card.data.person.first_name}${card.data.person.middle_name ? ' ' + card.data.person.middle_name : ''}`;
+               ~~~~~~~~
+
+src/pages/[...lang]/memorial/card/[slug].astro:11:19 - error ts(18048): 'card' is possibly 'undefined'.
+
+11   <CardFull data={card.data} />
+                     ~~~~
+src/pages/[...lang]/memorial/card/[slug].astro:3:10 - warning ts(6133): 'getCollection' is declared but its value is never read.
+
+3 import { getCollection, getEntry } from 'astro:content';
+           ~~~~~~~~~~~~~
+
+Result (67 files):
+- 19 errors
+- 0 warnings
+- 7 hints
+
  ELIFECYCLE  Command failed with exit code 1.
 PS C:\astro-projects\memorial-korpech-crimea>
-
-[{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "eslint",
-	"code": {
-		"value": "perfectionist/sort-imports",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/sort-imports",
-			"scheme": "https",
-			"authority": "perfectionist.dev"
-		}
-	},
-	"severity": 8,
-	"message": "Expected \"astro:content\" (value-external) to come before \"@/layouts/Layout.astro\" (value-internal).",
-	"source": "eslint",
-	"startLineNumber": 3,
-	"startColumn": 1,
-	"endLineNumber": 3,
-	"endColumn": 47,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "eslint",
-	"code": {
-		"value": "import/first",
-		"target": {
-			"$mid": 1,
-			"path": "/9romise/eslint-plugin-import-lite/blob/main/src/rules/first/README.md",
-			"scheme": "https",
-			"authority": "github.com"
-		}
-	},
-	"severity": 8,
-	"message": "Import in body of module; reorder to top.",
-	"source": "eslint",
-	"startLineNumber": 9,
-	"startColumn": 1,
-	"endLineNumber": 9,
-	"endColumn": 79,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2307",
-	"severity": 8,
-	"message": "Cannot find module '../../../../data/dictionaries/units_registry.json' or its corresponding type declarations.",
-	"source": "ts",
-	"startLineNumber": 9,
-	"startColumn": 27,
-	"endLineNumber": 9,
-	"endColumn": 78,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "eslint",
-	"code": {
-		"value": "import/first",
-		"target": {
-			"$mid": 1,
-			"path": "/9romise/eslint-plugin-import-lite/blob/main/src/rules/first/README.md",
-			"scheme": "https",
-			"authority": "github.com"
-		}
-	},
-	"severity": 8,
-	"message": "Import in body of module; reorder to top.",
-	"source": "eslint",
-	"startLineNumber": 11,
-	"startColumn": 1,
-	"endLineNumber": 11,
-	"endColumn": 71,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "eslint",
-	"code": {
-		"value": "perfectionist/sort-imports",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/sort-imports",
-			"scheme": "https",
-			"authority": "perfectionist.dev"
-		}
-	},
-	"severity": 8,
-	"message": "Expected \"../../../../data/dictionaries/units_dict.json\" to come before \"../../../../data/dictionaries/units_registry.json\".",
-	"source": "eslint",
-	"startLineNumber": 11,
-	"startColumn": 1,
-	"endLineNumber": 11,
-	"endColumn": 71,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2307",
-	"severity": 8,
-	"message": "Cannot find module '../../../../data/dictionaries/units_dict.json' or its corresponding type declarations.",
-	"source": "ts",
-	"startLineNumber": 11,
-	"startColumn": 23,
-	"endLineNumber": 11,
-	"endColumn": 70,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "eslint",
-	"code": {
-		"value": "prefer-template",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/latest/rules/prefer-template",
-			"scheme": "https",
-			"authority": "eslint.org"
-		}
-	},
-	"severity": 8,
-	"message": "Unexpected string concatenation.",
-	"source": "eslint",
-	"startLineNumber": 23,
-	"startColumn": 5,
-	"endLineNumber": 23,
-	"endColumn": 43,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2769",
-	"severity": 8,
-	"message": "No overload matches this call.\n  Overload 1 of 2, '(collection: keyof DataEntryMap, filter?: ((entry: { id: string; body?: string | undefined; collection: \"about\"; data: { lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; }; rendered?: RenderedContent | undefined; filePath?: string | undefined; } | { ...; }) => entry is { ...; } | { ...; }) | undefined): Promise<...>', gave the following error.\n    Argument of type '\"fallen\"' is not assignable to parameter of type 'keyof DataEntryMap'.\n  Overload 2 of 2, '(collection: keyof DataEntryMap, filter?: ((entry: { id: string; body?: string | undefined; collection: \"about\"; data: { lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; }; rendered?: RenderedContent | undefined; filePath?: string | undefined; } | { ...; }) => unknown) | undefined): Promise<...>', gave the following error.\n    Argument of type '\"fallen\"' is not assignable to parameter of type 'keyof DataEntryMap'.",
-	"source": "ts",
-	"startLineNumber": 26,
-	"startColumn": 36,
-	"endLineNumber": 26,
-	"endColumn": 44,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2339",
-	"severity": 8,
-	"message": "Property 'service' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'service' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
-	"source": "ts",
-	"startLineNumber": 29,
-	"startColumn": 52,
-	"endLineNumber": 29,
-	"endColumn": 59,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2339",
-	"severity": 8,
-	"message": "Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
-	"source": "ts",
-	"startLineNumber": 33,
-	"startColumn": 24,
-	"endLineNumber": 33,
-	"endColumn": 30,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "2339",
-	"severity": 8,
-	"message": "Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
-	"source": "ts",
-	"startLineNumber": 34,
-	"startColumn": 24,
-	"endLineNumber": 34,
-	"endColumn": 30,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'id' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 40,
-	"startColumn": 62,
-	"endLineNumber": 40,
-	"endColumn": 64,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
-	"owner": "_generated_diagnostic_collection_name_#1",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'child' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 72,
-	"startColumn": 33,
-	"endLineNumber": 72,
-	"endColumn": 38,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]

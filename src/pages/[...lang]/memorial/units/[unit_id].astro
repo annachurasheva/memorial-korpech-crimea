@@ -1,24 +1,45 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { getCollection } from 'astro:content';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import type { GetStaticPathsResult } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
 
-export async function getStaticPaths() {
+interface UnitNode {
+  dict_keys: string[];
+  type: string;
+  number: string;
+  formation?: string;
+  disband?: string;
+  status_note?: string;
+  camo_url?: string;
+  reference_url?: string;
+  history_note?: string;
+  children: string[];
+}
+
+interface RegistryData {
+  units: Record<string, UnitNode>;
+}
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   const registryPath = join(process.cwd(), 'data/dictionaries/units_registry.json');
   const dictPath = join(process.cwd(), 'data/dictionaries/units_dict.json');
-  
-  const registry = JSON.parse(readFileSync(registryPath, 'utf-8'));
-  const dict = JSON.parse(readFileSync(dictPath, 'utf-8'));
-  
-  return Object.entries(registry.units).map(([unitId, unit]) => ({
+
+  const registryData = readFileSync(registryPath, 'utf-8');
+  const dictData = readFileSync(dictPath, 'utf-8');
+  const registry = JSON.parse(registryData) as RegistryData;
+  const dict = JSON.parse(dictData) as Record<string, string>;
+
+  return Object.entries(registry.units).map(([unitId, unit]: [string, UnitNode]) => ({
     params: { unit_id: unitId },
     props: { unit, dict }
   }));
 }
 
-const { unit, dict } = Astro.props;
-const unitId = Astro.params.unit_id;
+const { unit, dict } = Astro.props as { unit: UnitNode; dict: Record<string, string> };
+const unitId = Astro.params.unit_id as string;
+const lang = Astro.params.lang as string;
 
 // Получить norm из словаря
 const normKey = unit.dict_keys[0];
@@ -27,11 +48,16 @@ const norm = dict[normKey] || normKey;
 // Получить карточки из коллекции fallen
 const fallen = await getCollection('fallen');
 const fallenInUnit = fallen.filter(card => card.data.service.unit_id === unitId);
+
+// Загружаем registry для доступа к дочерним элементам в template
+const registryPath = join(process.cwd(), 'data/dictionaries/units_registry.json');
+const registryData = readFileSync(registryPath, 'utf-8');
+const registry = JSON.parse(registryData) as RegistryData;
 ---
 
-<Layout title={norm}>
+<Layout>
   <h1>{norm}</h1>
-  
+
   <div class="unit-info">
     <p><strong>Тип:</strong> {unit.type}</p>
     <p><strong>Номер:</strong> {unit.number}</p>
@@ -41,40 +67,37 @@ const fallenInUnit = fallen.filter(card => card.data.service.unit_id === unitId)
     {unit.camo_url && <p><strong>ЦАМО:</strong> <a href={unit.camo_url} target="_blank">ссылка</a></p>}
     {unit.reference_url && <p><strong>Источник:</strong> <a href={unit.reference_url} target="_blank">ссылка</a></p>}
   </div>
-  
+
   {unit.history_note && (
     <div class="history">
       <h2>История</h2>
       <p>{unit.history_note}</p>
     </div>
   )}
-  
+
   {unit.children.length > 0 && (
     <div class="children">
       <h2>Состав</h2>
       <ul>
         {unit.children.map((childId: string) => {
-          const registryPath = join(process.cwd(), 'data/dictionaries/units_registry.json');
-          const registry = JSON.parse(readFileSync(registryPath, 'utf-8'));
-          const child = registry.units[childId];
-          if (!child) return null;
-          const childNorm = dict[child.dict_keys[0]] || child.dict_keys[0];
+          const childUnit = registry.units[childId];
+          const childNorm = dict[childUnit.dict_keys[0]] || childUnit.dict_keys[0];
           return (
             <li>
-              <a href={`/memorial/units/${childId}/`}>{childNorm}</a>
+              <a href={`/${lang}/memorial/units/${childId}/`}>{childNorm}</a>
             </li>
           );
         })}
       </ul>
     </div>
   )}
-  
+
   <div class="fallen">
     <h2>Павшие ({fallenInUnit.length})</h2>
     <ul>
       {fallenInUnit.map(card => (
         <li>
-          <a href={`/memorial/card/${card.data.slug}/`}>
+          <a href={`/${lang}/memorial/card/${card.data.slug}/`}>
             {card.data.person.last_name} {card.data.person.first_name[0]}.
             {card.data.person.middle_name ? card.data.person.middle_name[0] + '.' : ''}
           </a>
