@@ -1,7 +1,3 @@
---- scripts/csv-to-fallen.mjs (原始)
-
-
-+++ scripts/csv-to-fallen.mjs (修改后)
 /**
  * ФАЙЛ: scripts/csv-to-fallen.mjs
  * СТАТУС: реализация TASK-0002 rev.3
