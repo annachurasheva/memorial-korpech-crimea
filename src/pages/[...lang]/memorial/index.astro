@@ -1,7 +1,34 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import CardSummary from '@/components/memorial/CardSummary.astro';
+
+const fallen = await getCollection('fallen');
+
+// Сортировка по burial.primary_norm (алфавит)
+const sortedFallen = fallen.sort((a, b) => {
+  const aNorm = a.data.burial.primary_norm || '';
+  const bNorm = b.data.burial.primary_norm || '';
+  return aNorm.localeCompare(bNorm);
+});
 ---
+
 <Layout>
   <h1>Мемориал павших</h1>
-  <p>Заглушка. Точка входа во Второй Слой.</p>
+  <p>Список карточек павших героев.</p>
+
+  <div class="cards-grid">
+    {sortedFallen.map((card) => (
+      <CardSummary data={card.data} />
+    ))}
+  </div>
 </Layout>
+
+<style>
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>

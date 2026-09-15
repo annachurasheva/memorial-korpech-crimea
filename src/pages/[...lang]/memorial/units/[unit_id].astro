@@ -1,0 +1,191 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import CardSummary from '@/components/memorial/CardSummary.astro';
+
+const { unit_id } = Astro.params;
+
+// Чтение реестра частей
+import unitsRegistry from '../../../../data/dictionaries/units_registry.json';
+// Чтение словаря нормализованных названий
+import unitsDict from '../../../../data/dictionaries/units_dict.json';
+
+// Получение данных о части из реестра
+const unitData = unitsRegistry.units[unit_id as string];
+
+if (!unitData) {
+  throw new Error(`Часть с ID ${unit_id} не найдена в реестре`);
+}
+
+// Получение нормализованного названия из словаря по первому ключу
+const normName = unitData.dict_keys && unitData.dict_keys.length > 0
+  ? unitsDict[unitData.dict_keys[0] as keyof typeof unitsDict] || unitData.dict_keys[0]
+  : unitData.type + ' №' + unitData.number;
+
+// Получение всех карточек павших
+const fallen = await getCollection('fallen');
+
+// Фильтрация по unit_id
+const unitFallen = fallen.filter(card => card.data.service.unit_id === unit_id);
+
+// Сортировка по burial.primary_norm (алфавит)
+const sortedFallen = unitFallen.sort((a, b) => {
+  const aNorm = a.data.burial.primary_norm || '';
+  const bNorm = b.data.burial.primary_norm || '';
+  return aNorm.localeCompare(bNorm);
+});
+
+// Формирование иерархии
+const parentUnit = unitData.parent ? unitsRegistry.units[unitData.parent] : null;
+const childUnits = unitData.children ? unitData.children.map(id => unitsRegistry.units[id]) : [];
+---
+
+<Layout>
+  <article class="unit-page">
+    <h1>{normName}</h1>
+
+    <!-- Основная информация -->
+    <section class="unit-info">
+      <dl>
+        <dt>Тип</dt>
+        <dd>{unitData.type}</dd>
+
+        <dt>Номер</dt>
+        <dd>{unitData.number}</dd>
+
+        {parentUnit && (
+          <>
+            <dt>Родительская часть</dt>
+            <dd>
+              <a href={`/memorial/units/${unitData.parent}/`}>
+                {parentUnit.type} №{parentUnit.number}
+              </a>
+            </dd>
+          </>
+        )}
+
+        {childUnits.length > 0 && (
+          <>
+            <dt>Дочерние части</dt>
+            <dd>
+              <ul>
+                {childUnits.map(child => (
+                  <li>
+                    <a href={`/memorial/units/${child.dict_keys[0]}/`}>
+                      {child.type} №{child.number}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </>
+        )}
+
+        {unitData.camo_url && (
+          <>
+            <dt>Страница на ПАМЯТЬ НАРОДА</dt>
+            <dd>
+              <a href={unitData.camo_url} target="_blank" rel="noopener noreferrer">
+                {unitData.camo_url}
+              </a>
+            </dd>
+          </>
+        )}
+
+        {unitData.reference_url && (
+          <>
+            <dt>Справочная информация</dt>
+            <dd>
+              <a href={unitData.reference_url} target="_blank" rel="noopener noreferrer">
+                {unitData.reference_url}
+              </a>
+            </dd>
+          </>
+        )}
+
+        {unitData.history_note && (
+          <>
+            <dt>Историческая справка</dt>
+            <dd>{unitData.history_note}</dd>
+          </>
+        )}
+      </dl>
+    </section>
+
+    <!-- Список павших -->
+    <section class="fallen-list">
+      <h2>Павшие из этой части ({sortedFallen.length})</h2>
+
+      {sortedFallen.length > 0 ? (
+        <div class="cards-grid">
+          {sortedFallen.map((card) => (
+            <CardSummary data={card.data} />
+          ))}
+        </div>
+      ) : (
+        <p>Нет данных о павших из этой части.</p>
+      )}
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .unit-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .unit-info {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+  }
+
+  dt {
+    font-weight: bold;
+    color: #666;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  a {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+</style>

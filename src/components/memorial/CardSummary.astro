@@ -1,0 +1,91 @@
+---
+import type { z } from 'astro/zod';
+import type { collections } from '@/content.config';
+
+type FallenCard = z.infer<typeof collections.fallen.schema>;
+
+interface Props {
+  data: FallenCard;
+}
+
+const { data } = Astro.props;
+const { person, burial } = data;
+
+// Формирование полного имени с инициалами
+const fullName = `${person.last_name} ${person.first_name}${person.middle_name ? ' ' + person.middle_name : ''}`;
+const initials = person.middle_name
+  ? `${person.first_name[0]}.${person.middle_name[0]}.`
+  : `${person.first_name[0]}.`;
+
+// Ссылка на полную карточку
+const cardUrl = `/memorial/card/${data.slug}/`;
+---
+
+<article class="card-summary">
+  <h3>
+    <a href={cardUrl}>
+      {person.last_name} {initials}
+    </a>
+  </h3>
+
+  <p class="rank">{person.rank_norm}</p>
+
+  <p class="burial-location">
+    <strong>Место захоронения:</strong> {burial.primary_norm}
+  </p>
+
+  <a href={cardUrl} class="read-more">
+    Подробнее →
+  </a>
+</article>
+
+<style>
+  .card-summary {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .card-summary:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+  }
+
+  h3 a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    color: #1976d2;
+    text-decoration: underline;
+  }
+
+  .rank {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .burial-location {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .read-more {
+    display: inline-block;
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+</style>

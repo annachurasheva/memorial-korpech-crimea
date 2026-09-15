@@ -1,0 +1,233 @@
+---
+import type { z } from 'astro/zod';
+import type { collections } from '@/content.config';
+
+type FallenCard = z.infer<typeof collections.fallen.schema>;
+
+interface Props {
+  data: FallenCard;
+}
+
+const { data } = Astro.props;
+const { person, service, burial, memorialization, sources, photo } = data;
+
+// Формирование полного имени
+const fullName = `${person.last_name} ${person.first_name}${person.middle_name ? ' ' + person.middle_name : ''}`;
+---
+
+<div class="card-full">
+  <!-- IMPORTANT блок -->
+  <blockquote class="important-block">
+    <p><strong>Мемориал павших</strong></p>
+    <p>Восстановим справедливость, высечем его ИМЯ на камне на вечно.</p>
+  </blockquote>
+
+  <!-- Персональные данные -->
+  <section class="person-section">
+    <h2>Данные персоны</h2>
+    <dl>
+      <dt>ФИО</dt>
+      <dd>{fullName}</dd>
+
+      <dt>Год рождения</dt>
+      <dd>{person.birth_year ?? '—'}</dd>
+
+      <dt>Место рождения</dt>
+      <dd>{person.birth_location ?? '—'}</dd>
+
+      <dt>Дата гибели</dt>
+      <dd>{person.death_date}</dd>
+
+      <dt>Причина</dt>
+      <dd>{person.cause}</dd>
+    </dl>
+  </section>
+
+  <!-- Данные службы -->
+  <section class="service-section">
+    <h2>Данные службы</h2>
+    <dl>
+      <dt>Звание</dt>
+      <dd>{service.rank_norm}</dd>
+
+      <dt>Воинская часть</dt>
+      <dd>
+        {service.unit_norm}
+        {service.unit_url && (
+          <a href={service.unit_url} target="_blank" rel="noopener noreferrer">
+            [источник]
+          </a>
+        )}
+      </dd>
+    </dl>
+  </section>
+
+  <!-- Данные захоронения -->
+  <section class="burial-section">
+    <h2>Данные захоронения</h2>
+    <dl>
+      <dt>Первичное захоронение</dt>
+      <dd>{burial.primary_norm}</dd>
+
+      <dt>Текущее захоронение</dt>
+      <dd>{burial.current_norm ?? '—'}</dd>
+
+      <dt>Статус текущего захоронения</dt>
+      <dd>{burial.current_status ?? '—'}</dd>
+    </dl>
+  </section>
+
+  <!-- Тип увековечивания -->
+  <section class="memorialization-section">
+    <h2>Тип увековечивания</h2>
+    <dl>
+      <dt>Статус</dt>
+      <dd>{memorialization.status}</dd>
+
+      <dt>Тип</dt>
+      <dd>{memorialization.type ?? '—'}</dd>
+
+      {memorialization.location && (
+        <>
+          <dt>Местоположение</dt>
+          <dd>{memorialization.location}</dd>
+        </>
+      )}
+
+      {memorialization.plate_number && (
+        <>
+          <dt>Номер плиты/сектора</dt>
+          <dd>{memorialization.plate_number}</dd>
+        </>
+      )}
+
+      <dt>Гравировка выполнена</dt>
+      <dd>{memorialization.engraved ? 'Да' : 'Нет'}</dd>
+
+      {memorialization.engraved_date && (
+        <>
+          <dt>Дата гравировки</dt>
+          <dd>{memorialization.engraved_date}</dd>
+        </>
+      )}
+
+      {memorialization.notes && (
+        <>
+          <dt>Примечания</dt>
+          <dd>{memorialization.notes}</dd>
+        </>
+      )}
+    </dl>
+  </section>
+
+  <!-- Фото -->
+  {photo && photo.length > 0 && (
+    <section class="photo-section">
+      <h2>Фото</h2>
+      <div class="photo-grid">
+        {photo.map((src: string) => (
+          <img src={src} alt={`Фото ${fullName}`} loading="lazy" />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Источники (только ссылки) -->
+  <section class="sources-section">
+    <h2>Источники</h2>
+    <ul>
+      {sources.map((source: { org: string; url: string }) => (
+        <li>
+          <a href={source.url} target="_blank" rel="noopener noreferrer">
+            {source.org}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Giscus комментарии (заглушка) -->
+  <section class="comments-section">
+    <h2>Комментарии</h2>
+    <div class="giscus-placeholder">
+      <p>Настройки Giscus будут добавлены отдельно.</p>
+    </div>
+  </section>
+</div>
+
+<style>
+  .card-full {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .important-block {
+    border-left: 4px solid #d32f2f;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: #ffebee;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+  }
+
+  dt {
+    font-weight: bold;
+    color: #666;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .giscus-placeholder {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+</style>
