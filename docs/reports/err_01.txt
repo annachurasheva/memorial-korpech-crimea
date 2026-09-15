@@ -1,0 +1,234 @@
+> astro "check"
+
+17:07:36 [content] Syncing content
+17:07:36 [content] Content config changed
+17:07:36 [content] Clearing content store
+[InvalidContentEntryDataError] memorials → readme data does not match collection schema.
+
+  id**: **id: Required
+  name**: **name: Required
+  location**: **location: Required
+  status: Invalid option: expected one of "active"|"inactive"|"planned"
+
+  Hint:
+    See https://docs.astro.build/en/guides/content-collections/ for more information on content schemas.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/invalid-content-entry-data-error/
+  Location:
+    C:\astro-projects\memorial-korpech-crimea\src\content\memorials\README.md:0:0
+  Stack trace:
+    at getEntryData (C:\astro-projects\memorial-korpech-crimea\node_modules\.pnpm\astro@6.1.5_@types+node@25._6d0c47d141c1ea47b78a1edce0d9f0d9\node_modules\astro\dist\content\utils.js:122:16)
+    at async eval (C:\astro-projects\memorial-korpech-crimea\node_modules\.pnpm\astro@6.1.5_@types+node@25._6d0c47d141c1ea47b78a1edce0d9f0d9\node_modules\astro\dist\content\loaders\glob.js:211:13)
+ ELIFECYCLE  Command failed with exit code 1.
+PS C:\astro-projects\memorial-korpech-crimea>
+
+[{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "eslint",
+	"code": {
+		"value": "perfectionist/sort-imports",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/sort-imports",
+			"scheme": "https",
+			"authority": "perfectionist.dev"
+		}
+	},
+	"severity": 8,
+	"message": "Expected \"astro:content\" (value-external) to come before \"@/layouts/Layout.astro\" (value-internal).",
+	"source": "eslint",
+	"startLineNumber": 3,
+	"startColumn": 1,
+	"endLineNumber": 3,
+	"endColumn": 47,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "eslint",
+	"code": {
+		"value": "import/first",
+		"target": {
+			"$mid": 1,
+			"path": "/9romise/eslint-plugin-import-lite/blob/main/src/rules/first/README.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "Import in body of module; reorder to top.",
+	"source": "eslint",
+	"startLineNumber": 9,
+	"startColumn": 1,
+	"endLineNumber": 9,
+	"endColumn": 79,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2307",
+	"severity": 8,
+	"message": "Cannot find module '../../../../data/dictionaries/units_registry.json' or its corresponding type declarations.",
+	"source": "ts",
+	"startLineNumber": 9,
+	"startColumn": 27,
+	"endLineNumber": 9,
+	"endColumn": 78,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "eslint",
+	"code": {
+		"value": "import/first",
+		"target": {
+			"$mid": 1,
+			"path": "/9romise/eslint-plugin-import-lite/blob/main/src/rules/first/README.md",
+			"scheme": "https",
+			"authority": "github.com"
+		}
+	},
+	"severity": 8,
+	"message": "Import in body of module; reorder to top.",
+	"source": "eslint",
+	"startLineNumber": 11,
+	"startColumn": 1,
+	"endLineNumber": 11,
+	"endColumn": 71,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "eslint",
+	"code": {
+		"value": "perfectionist/sort-imports",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/sort-imports",
+			"scheme": "https",
+			"authority": "perfectionist.dev"
+		}
+	},
+	"severity": 8,
+	"message": "Expected \"../../../../data/dictionaries/units_dict.json\" to come before \"../../../../data/dictionaries/units_registry.json\".",
+	"source": "eslint",
+	"startLineNumber": 11,
+	"startColumn": 1,
+	"endLineNumber": 11,
+	"endColumn": 71,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2307",
+	"severity": 8,
+	"message": "Cannot find module '../../../../data/dictionaries/units_dict.json' or its corresponding type declarations.",
+	"source": "ts",
+	"startLineNumber": 11,
+	"startColumn": 23,
+	"endLineNumber": 11,
+	"endColumn": 70,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "eslint",
+	"code": {
+		"value": "prefer-template",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/latest/rules/prefer-template",
+			"scheme": "https",
+			"authority": "eslint.org"
+		}
+	},
+	"severity": 8,
+	"message": "Unexpected string concatenation.",
+	"source": "eslint",
+	"startLineNumber": 23,
+	"startColumn": 5,
+	"endLineNumber": 23,
+	"endColumn": 43,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2769",
+	"severity": 8,
+	"message": "No overload matches this call.\n  Overload 1 of 2, '(collection: keyof DataEntryMap, filter?: ((entry: { id: string; body?: string | undefined; collection: \"about\"; data: { lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; }; rendered?: RenderedContent | undefined; filePath?: string | undefined; } | { ...; }) => entry is { ...; } | { ...; }) | undefined): Promise<...>', gave the following error.\n    Argument of type '\"fallen\"' is not assignable to parameter of type 'keyof DataEntryMap'.\n  Overload 2 of 2, '(collection: keyof DataEntryMap, filter?: ((entry: { id: string; body?: string | undefined; collection: \"about\"; data: { lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; }; rendered?: RenderedContent | undefined; filePath?: string | undefined; } | { ...; }) => unknown) | undefined): Promise<...>', gave the following error.\n    Argument of type '\"fallen\"' is not assignable to parameter of type 'keyof DataEntryMap'.",
+	"source": "ts",
+	"startLineNumber": 26,
+	"startColumn": 36,
+	"endLineNumber": 26,
+	"endColumn": 44,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'service' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'service' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
+	"source": "ts",
+	"startLineNumber": 29,
+	"startColumn": 52,
+	"endLineNumber": 29,
+	"endColumn": 59,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
+	"source": "ts",
+	"startLineNumber": 33,
+	"startColumn": 24,
+	"endLineNumber": 33,
+	"endColumn": 30,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; } | { ...; }'.\n  Property 'burial' does not exist on type '{ title: string; published: Date; description: string; tags: string[]; draft: boolean; pin: number; toc: boolean; lang: \"\" | \"de\" | \"en\" | \"es\" | \"fr\" | \"ja\" | \"ko\" | \"pl\" | \"pt\" | \"ru\" | \"zh\" | \"zh-tw\"; abbrlink: string; updated?: Date | undefined; }'.",
+	"source": "ts",
+	"startLineNumber": 34,
+	"startColumn": 24,
+	"endLineNumber": 34,
+	"endColumn": 30,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'id' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 40,
+	"startColumn": 62,
+	"endLineNumber": 40,
+	"endColumn": 64,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/astro-projects/memorial-korpech-crimea/src/pages/[...lang]/memorial/units/[unit_id].astro",
+	"owner": "_generated_diagnostic_collection_name_#1",
+	"code": "7006",
+	"severity": 8,
+	"message": "Parameter 'child' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 72,
+	"startColumn": 33,
+	"endLineNumber": 72,
+	"endColumn": 38,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
