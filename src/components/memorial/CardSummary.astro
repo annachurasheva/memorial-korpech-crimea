@@ -1,18 +1,13 @@
 ---
-import type { z } from 'astro/zod';
-import type { collections } from '@/content.config';
-
-type FallenCard = z.infer<typeof collections.fallen.schema>;
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  data: FallenCard;
+  data: CollectionEntry<'fallen'>['data'];
 }
 
-const { data } = Astro.props;
-const { person, burial } = data;
-
-// Формирование полного имени с инициалами
-const fullName = `${person.last_name} ${person.first_name}${person.middle_name ? ' ' + person.middle_name : ''}`;
+const { data } = Astro.props as Props;
+const { person, burial, service } = data;
+const slug = data.slug;
 const initials = person.middle_name
   ? `${person.first_name[0]}.${person.middle_name[0]}.`
   : `${person.first_name[0]}.`;
@@ -28,7 +23,7 @@ const cardUrl = `/memorial/card/${data.slug}/`;
     </a>
   </h3>
 
-  <p class="rank">{person.rank_norm}</p>
+  <p class="rank">{service.rank_norm}</p>
 
   <p class="burial-location">
     <strong>Место захоронения:</strong> {burial.primary_norm}

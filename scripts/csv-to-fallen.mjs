@@ -34,12 +34,12 @@ const FILES = {
 };
 
 // Паттерн для извлечения номера и типа части
-const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\. броне\. рота|отд\. мото\. мех\. полк|отд\. сап\. бат\.|отд\. бат\. связи|отд\. рота связи|лбс|олбс|опс|ппс|в/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
+const UNIT_PATTERN = /(\d{1,4})\s*(сп|сд|ап|тп|тап|гап|сап|мсп|мсб|тбр|сбр|абр|оп|об|ор|рота|батальон|полк|дивизия|бригада|бао|оад|озад|минп|пулеметн|броне|мото|танковый|арт|минбатр|пб|сапбатр|отд|отдельный|иптад|птап|зенап|зад|пао|шао|бао|уак|укр|ур|отд\.\ броне\.\ рота|отд\.\ мото\.\ мех\.\ полк|отд\.\ сап\.\ бат\.|отд\.\ бат\.\ связи|отд\.\ рота связи|лбс|олбс|опс|ппс|в\/ч|эр|тб|аб|минд|гсп|гсд|пс|омсб|мсбр|тд|мд|ад|сд|гв\.|гвардейский)/i;
 
 // Транслитерация для slug
 function translit(str) {
   const ru = 'А-а-Б-б-В-в-Ґ-ґ-Г-г-Д-д-Е-е-Ё-ё-Є-є-Ж-ж-З-з-И-и-І-і-Ї-ї-Й-й-К-к-Л-л-М-м-Н-н-О-о-П-п-Р-р-С-с-Т-т-У-у-Ф-ф-Х-х-Ц-ц-Ч-ч-Ш-ш-Щ-щ-Ъ-ъ-Ы-ы-Ь-ь-Э-э-Ю-ю-Я-я-.';
-  const en = 'A-a-B-b-V-v-G-g-G-g-D-d-E-e-E-e-E-e-ZH-zh-Z-z-I-i-I-i-I-i-J-j-K-k-L-l-M-m-N-n-O-o-P-p-R-r-S-s-T-t-U-u-F-f-H-h-TS-ts-CH-ch-SH-sh-SCH-sch-''-Y-y-''-E-e-YU-yu-YA-ya-';
+  const en = "A-a-B-b-V-v-G-g-G-g-D-d-E-e-E-e-E-e-ZH-zh-Z-z-I-i-I-i-I-i-J-j-K-k-L-l-M-m-N-n-O-o-P-p-R-r-S-s-T-t-U-u-F-f-H-h-TS-ts-CH-ch-SH-sh-SCH-sch-'-Y-y-'-E-e-YU-yu-YA-ya-";
   const arr = str.split('');
   for (let i = 0; i < arr.length; i++) {
     const index = ru.indexOf(arr[i]);
@@ -128,13 +128,13 @@ function parseCSVLine(line) {
     if (char === '"') {
       inQuotes = !inQuotes;
     } else if (char === ',' && !inQuotes) {
-      result.push(current.trim().replace(/^"|"$/g, ''));
+      result.push(current.trim().replace(/^\"|\"$/g, ''));
       current = '';
     } else {
       current += char;
     }
   }
-  result.push(current.trim().replace(/^"|"$/g, ''));
+  result.push(current.trim().replace(/^\"|\"$/g, ''));
   return result;
 }
 
@@ -229,11 +229,9 @@ async function convert() {
       let unitNorm = unitRaw;
       let unitId = extractUnitId(unitRaw);
       let unitUrl = null;
-      let needsReview = false;
 
       // Проверка на не-войсковую запись
       if (isNonMilitaryUnit(unitRaw)) {
-        needsReview = true;
         await logMessage(FILES.processingLog, `needs_manual_review: ${lastName} ${firstName} ${middleName} - ${unitRaw}`);
         console.log(`[needs_manual_review] ${lastName} ${firstName} ${middleName}: ${unitRaw}`);
       }
@@ -252,7 +250,7 @@ async function convert() {
       }
 
       // Генерация slug и id
-      const id = row['document_id'] || `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      const id = row['document_id'] || `${Date.now()}-${Math.random().toString(36).substring(2, 11)}`;
       const slugBase = translit(`${lastName} ${firstName}`);
       const slug = `${slugBase}-${id}`;
 

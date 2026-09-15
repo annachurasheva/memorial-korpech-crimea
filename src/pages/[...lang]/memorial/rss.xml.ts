@@ -24,7 +24,6 @@ export const GET: APIRoute = async ({ site }) => {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}memorial/rss.xml" rel="self" type="application/rss+xml"/>
     ${sortedFallen.map(card => {
-      const fullName = `${card.data.person.last_name} ${card.data.person.first_name}${card.data.person.middle_name ? ' ' + card.data.person.middle_name : ''}`;
       const initials = card.data.person.middle_name
         ? `${card.data.person.first_name[0]}.${card.data.person.middle_name[0]}.`
         : `${card.data.person.first_name[0]}.`;

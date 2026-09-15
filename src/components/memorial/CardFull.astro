@@ -1,14 +1,11 @@
 ---
-import type { z } from 'astro/zod';
-import type { collections } from '@/content.config';
-
-type FallenCard = z.infer<typeof collections.fallen.schema>;
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  data: FallenCard;
+  data: CollectionEntry<'fallen'>['data'];
 }
 
-const { data } = Astro.props;
+const { data } = Astro.props as Props;
 const { person, service, burial, memorialization, sources, photo } = data;
 
 // Формирование полного имени
