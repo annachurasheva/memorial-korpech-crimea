@@ -36,84 +36,102 @@ const giscusConfig = {
   inputPosition,
   lang: giscusLocaleMap[lang],
 }
+
+function checkConsent(): boolean {
+  return typeof localStorage !== 'undefined' && localStorage.getItem('mem-consent') === '1'
+}
+
+const hasConsent = checkConsent()
 ---
 
-<div
-  id="giscus"
-  class="giscus mt-16"
-  data-config={JSON.stringify(giscusConfig)}
-/>
+<div id="giscus" class="giscus mt-16">
+  {hasConsent
+? (
+    <>
+      <div data-config={JSON.stringify(giscusConfig)} />
+      <script>
+        let giscusContainer = null
 
-<!-- Giscus Script >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-<script>
-let giscusContainer: HTMLElement | null = null
+        function getThemeUrl() {
+          const isDark = document.documentElement.classList.contains('dark')
+          return isDark
+            ? `https://cdn.jsdelivr.net/gh/radishzzz/astro-theme-retypeset@master/public/giscus/theme-dark.css`
+            : `https://cdn.jsdelivr.net/gh/radishzzz/astro-theme-retypeset@master/public/giscus/theme-light.css`
+        }
 
-function getThemeUrl() {
-  const isDark = document.documentElement.classList.contains('dark')
-  return isDark
-    ? `https://cdn.jsdelivr.net/gh/radishzzz/astro-theme-retypeset@master/public/giscus/theme-dark.css`
-    : `https://cdn.jsdelivr.net/gh/radishzzz/astro-theme-retypeset@master/public/giscus/theme-light.css`
-}
+        function updateGiscusTheme() {
+          if (!giscusContainer || !giscusContainer.dataset.config) {
+            return
+          }
 
-function updateGiscusTheme() {
-  if (!giscusContainer || !giscusContainer.dataset.config) {
-    return
-  }
+          const giscusWindow = giscusContainer.querySelector('iframe.giscus-frame')?.contentWindow
+          if (!giscusWindow) {
+            return
+          }
 
-  const giscusWindow = giscusContainer.querySelector<HTMLIFrameElement>('iframe.giscus-frame')?.contentWindow
-  if (!giscusWindow) {
-    return
-  }
+          try {
+            giscusWindow.postMessage(
+              { giscus: { setConfig: { theme: getThemeUrl() } } },
+              'https://giscus.app',
+            )
+          }
+          catch (error) {
+            console.error('[Giscus] Failed to update theme:', error)
+          }
+        }
 
-  try {
-    giscusWindow.postMessage(
-      { giscus: { setConfig: { theme: getThemeUrl() } } },
-      'https://giscus.app',
-    )
-  }
-  catch (error) {
-    console.error('[Giscus] Failed to update theme:', error)
-  }
-}
+        function setupGiscus() {
+          giscusContainer = document.getElementById('giscus')
+          if (!giscusContainer || !giscusContainer.dataset.config) {
+            return
+          }
 
-function setupGiscus() {
-  giscusContainer = document.getElementById('giscus')
-  if (!giscusContainer || !giscusContainer.dataset.config) {
-    return
-  }
+          giscusContainer.innerHTML = ''
 
-  giscusContainer.innerHTML = ''
+          try {
+            const config = JSON.parse(giscusContainer.dataset.config)
+            const { category, ...restConfig } = config
 
-  try {
-    const config = JSON.parse(giscusContainer.dataset.config)
-    const { category, ...restConfig } = config
+            const dataAttributes = {
+              ...restConfig,
+              ...(category && { category }),
+              theme: getThemeUrl(),
+            }
 
-    const dataAttributes: Record<string, string> = {
-      ...restConfig,
-      ...(category && { category }),
-      theme: getThemeUrl(),
-    }
+            const script = document.createElement('script')
+            script.crossOrigin = 'anonymous'
+            script.async = true
+            Object.assign(script.dataset, dataAttributes)
+            script.src = 'https://giscus.app/client.js'
+            giscusContainer.appendChild(script)
+          }
+          catch (error) {
+            console.error('[Giscus] Failed to initialize:', error)
+          }
+        }
 
-    const script = document.createElement('script')
-    script.crossOrigin = 'anonymous'
-    script.async = true
-    Object.assign(script.dataset, dataAttributes)
-    script.src = 'https://giscus.app/client.js'
-    giscusContainer.appendChild(script)
-  }
-  catch (error) {
-    console.error('[Giscus] Failed to initialize:', error)
-  }
-}
+        function cleanupGiscus() {
+          if (giscusContainer) {
+            giscusContainer.innerHTML = ''
+            giscusContainer = null
+          }
+        }
 
-function cleanupGiscus() {
-  if (giscusContainer) {
-    giscusContainer.innerHTML = ''
-    giscusContainer = null
-  }
-}
-
-document.addEventListener('astro:page-load', setupGiscus)
-document.addEventListener('astro:before-swap', cleanupGiscus)
-document.addEventListener('theme-changed', updateGiscusTheme)
-</script>
+        document.addEventListener('astro:page-load', setupGiscus)
+        document.addEventListener('astro:before-swap', cleanupGiscus)
+        document.addEventListener('theme-changed', updateGiscusTheme)
+      </script>
+    </>
+  )
+: (
+    <div class="rounded-lg bg-gray-100 p-6 text-center dark:bg-gray-800">
+      <p class="mb-4">Комментарии работают через сервис GitHub. Чтобы включить их, примите условия передачи данных.</p>
+      <button
+        onclick="localStorage.setItem('mem-consent', '1'); location.reload()"
+        class="rounded bg-green-600 px-6 py-2 text-white font-medium transition-colors hover:bg-green-700"
+      >
+        Согласен
+      </button>
+    </div>
+  )}
+</div>
