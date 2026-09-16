@@ -1,0 +1,42 @@
+<div id="consent-banner" class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white p-4 shadow-lg">
+  <div class="mx-auto max-w-4xl flex flex-col items-center gap-4 md:flex-row">
+    <p class="flex-1 text-sm">
+      Сайт использует статистику (Google Analytics) и комментарии (GitHub): IP и cookie передаются на зарубежные серверы.
+      <a href="/ru/privacy/" class="text-blue-600 underline">Политика</a>
+    </p>
+    <div class="flex gap-2">
+      <button id="consent-accept" class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Согласен</button>
+      <button id="consent-decline" class="rounded bg-gray-200 px-4 py-2 text-gray-800 hover:bg-gray-300">Отказаться</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+ (function () {
+   let key = 'mem-consent'
+   let consent = localStorage.getItem(key)
+
+   if (consent === null) {
+     document.getElementById('consent-banner').style.display = 'block'
+
+     document.getElementById('consent-accept').addEventListener('click', () => {
+       localStorage.setItem(key, '1')
+       location.reload()
+     })
+
+     document.getElementById('consent-decline').addEventListener('click', () => {
+       localStorage.setItem(key, '0')
+       document.getElementById('consent-banner').style.display = 'none'
+     })
+   }
+ else {
+     document.getElementById('consent-banner').style.display = 'none'
+   }
+ })()
+</script>
+
+<style is:inline>
+  #consent-banner {
+    display: none;
+  }
+</style>

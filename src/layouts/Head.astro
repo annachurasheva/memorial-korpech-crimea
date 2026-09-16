@@ -195,4 +195,31 @@ const pageImage = new URL(`${base}/og/${postSlug ?? 'index'}.png`, Astro.url.ori
     data-website-id={umamiAnalyticsID}
   />
 )}
+
+<!-- Яндекс.Метрика + Google Analytics с гейтом согласия -->
+<script is:inline>
+  (function () {
+    // Яндекс.Метрика — без гейта (РФ-контур)
+    var mt = document.createElement('script');
+    mt.type = 'text/javascript'; mt.async = true;
+    mt.src = 'https://mc.yandex.ru/metrika/tag.js?ns=1';
+    document.head.appendChild(mt);
+    window.yaCounter112710769 = null;
+    window.Ya = window.Ya || {};
+    (function mtr(d, w, c, s, h, e) {
+      w[s] = w[s] || []; w[s].push({ id: 112710769, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
+      var n = d.getElementsByTagName('script')[0]; e = d.createElement('script'); e.async = true; e.src = mt.src; n.parentNode.insertBefore(e, n);
+      w[c] = w[c] || function () { (w[c].a = w[c].a || []).push(arguments); };
+    })(document, window, 'YaCounter112710769', 'yaParams');
+    // Google Analytics — ТОЛЬКО после согласия (трансграничная передача)
+    if (localStorage.getItem('mem-consent') === '1') {
+      var g = document.createElement('script'); g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-HXZMBB2CVJ';
+      document.head.appendChild(g);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', 'G-HXZMBB2CVJ');
+    }
+  })();
+</script>
 </head>
