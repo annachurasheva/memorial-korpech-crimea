@@ -2,8 +2,8 @@
 
 КООРДИНАТЫ
 Репо: memorial-korpech-crimea
-Ветка: qwen3-memorial
-Стартовый хэш: d98526a (формула синхронизации: «возьми обнову по коммиту [хэш] —
+Ветка: qwen3-memorial Регламент: QWEN.md v0.4 (https://github.com/annachurasheva/memorial-korpech-crimea/blob/qwen3-memorial/QWEN.md)
+Стартовый хэш: 47a88e3 (формула синхронизации: «возьми обнову по коммиту [хэш] —
 читай и делай»; «обнови репо» не использовать)
 Регламент: QWEN.md v0.4 §7 + REGLAMENT-CODER v4
 Спецификация задачи: docs/tasks/RELEASE-TRIAL-1.md — ЕДИНСТВЕННЫЙ документ
