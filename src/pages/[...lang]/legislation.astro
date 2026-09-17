@@ -1,5 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { allLocales } from '@/config';
+
+export function getStaticPaths() {
+  return allLocales.map(lang => ({
+    params: { lang }
+  }));
+}
 ---
 
 <Layout>
