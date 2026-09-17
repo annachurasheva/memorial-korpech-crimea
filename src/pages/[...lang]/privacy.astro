@@ -1,11 +1,11 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { allLocales } from '@/config';
+import { allLocales } from '@/config'
+import Layout from '@/layouts/Layout.astro'
 
 export function getStaticPaths() {
   return allLocales.map(lang => ({
-    params: { lang }
-  }));
+    params: { lang },
+  }))
 }
 ---
 
