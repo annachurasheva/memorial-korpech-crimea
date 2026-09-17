@@ -1,14 +1,22 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import { getEntry } from 'astro:content';
-import CardFull from '@/components/memorial/CardFull.astro';
+import { getCollection } from 'astro:content'
+import CardFull from '@/components/memorial/CardFull.astro'
+import { allLocales } from '@/config'
+import Layout from '@/layouts/Layout.astro'
 
-const { slug } = Astro.params;
-const card = await getEntry('fallen', `${slug}.md`);
+export async function getStaticPaths() {
+  const fallen = await getCollection('fallen')
 
-if (!card) {
-  return Astro.redirect('/404');
+  return fallen.flatMap((card) => {
+    const slug = card.data.slug
+    return allLocales.map(lang => ({
+      params: { lang, slug },
+      props: { card },
+    }))
+  })
 }
+
+const { card } = Astro.props;
 ---
 
 <Layout>
