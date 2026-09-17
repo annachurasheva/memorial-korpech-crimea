@@ -1,5 +1,12 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import { allLocales } from '@/config'
+import Layout from '@/layouts/Layout.astro'
+
+export function getStaticPaths() {
+  return allLocales.map(lang => ({
+    params: { lang },
+  }))
+}
 
 const lang = Astro.params.lang || 'ru';
 ---
@@ -7,17 +14,17 @@ const lang = Astro.params.lang || 'ru';
 <Layout>
   <main class="prose mx-auto max-w-2xl">
     <h1>Вас ждём.</h1>
-    
+
     <p>Родных павших под Корпечью.<br>
     Поисковиков, которые не за плату, а за совесть откапывали косточки дедов.<br>
     Юниоров, готовых нести имя.<br>
     Библиотеки, хранящие поселковые доски памяти.</p>
-    
+
     <p>Их здесь 3 310. В документах они уже не «неизвестные».</p>
-    
+
     <p><b>Два слова, которые решают всё:</b><br>
     <span class="text-2xl">Высечь на камне. Навечно.</span></p>
-    
+
     <nav class="mt-8 flex flex-wrap gap-4">
       <a href={`/${lang}/memorial/`}>Мемориал</a> ·
       <a href={`/${lang}/posts/`}>Очерки и документы</a> ·
