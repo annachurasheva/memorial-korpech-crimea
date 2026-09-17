@@ -4,23 +4,36 @@ import { defineCollection } from 'astro:content'
 import { allLocales, themeConfig } from '@/config'
 
 const posts = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),
   schema: z.object({
-    // существующие поля
+    // required
     title: z.string(),
     published: z.date(),
+    // optional
     description: z.string().optional().default(''),
+    updated: z.preprocess(
+      val => val === '' ? undefined : val,
+      z.date().optional(),
+    ),
     tags: z.array(z.string()).optional().default([]),
+    // Advanced
+    draft: z.boolean().optional().default(false),
+    pin: z.number().int().min(0).max(99).optional().default(0),
+    toc: z.boolean().optional().default(themeConfig.global.toc),
     lang: z.enum(['', ...allLocales]).optional().default(''),
-    // новое поле
+    abbrlink: z.string().optional().default('').refine(
+      abbrlink => !abbrlink || /^[a-z0-9\-]*$/.test(abbrlink),
+      { message: 'Abbrlink can only contain lowercase letters, numbers and hyphens' },
+    ),
+    // поле проекта (mem-2026)
     author: z.object({
       name: z.string(),
-      credentials: z.string().optional(), // "кандидат исторических наук"
-      affiliation: z.string().optional(), // организация
-      bio: z.string().optional() // краткая биография
-    }).optional()
-  })
-});
+      credentials: z.string().optional(),
+      affiliation: z.string().optional(),
+      bio: z.string().optional(),
+    }).optional(),
+  }),
+})
 
 const about = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/about' }),
@@ -49,7 +62,7 @@ const fallen = defineCollection({
       birth_year: z.number().nullable(),
       birth_location: z.string().nullable().optional(),
       death_date: z.string(),
-      cause: z.string()
+      cause: z.string(),
     }),
 
     // service data
@@ -60,27 +73,27 @@ const fallen = defineCollection({
       unit_norm: z.string(),
       unit_id: z.string(),
       unit_url: z.string().nullable().optional(),
-      unit_review_status: z.enum(['pending', 'verified', 'disputed']).nullable().optional()
+      unit_review_status: z.enum(['pending', 'verified', 'disputed']).nullable().optional(),
     }),
 
     // burial data
     burial: z.object({
       primary_norm: z.string(),
       current_norm: z.string().nullable().optional(),
-      current_status: z.string().nullable().optional()
+      current_status: z.string().nullable().optional(),
     }),
 
     // relatives (optional)
     relatives: z.array(z.object({
       name: z.string(),
       address: z.string().nullable().optional(),
-      relationship: z.string().nullable()
+      relationship: z.string().nullable(),
     })).optional(),
 
     // identification
     identification: z.object({
       status: z.enum(['named', 'unnamed']),
-      source: z.string()
+      source: z.string(),
     }),
 
     // memorialization
@@ -91,14 +104,14 @@ const fallen = defineCollection({
       plate_number: z.string().nullable().optional(),
       engraved: z.boolean(),
       engraved_date: z.string().nullable(),
-      notes: z.string().nullable().optional()
+      notes: z.string().nullable().optional(),
     }),
 
     // awards (optional)
     awards: z.array(z.object({
       title: z.string(),
       date: z.string().nullable(),
-      status: z.enum(['proposed', 'confirmed', 'awarded'])
+      status: z.enum(['proposed', 'confirmed', 'awarded']),
     })).optional(),
 
     // photos
@@ -107,19 +120,19 @@ const fallen = defineCollection({
     // sources
     sources: z.array(z.object({
       org: z.string(),
-      url: z.string()
+      url: z.string(),
     })),
 
     // supplements (optional)
     supplements: z.array(z.object({
       org: z.string(),
       data: z.string(),
-      status: z.enum(['queue', 'approved', 'declined'])
+      status: z.enum(['queue', 'approved', 'declined']),
     })).optional(),
 
     // optional fields
-    admin_word: z.string().optional()
-  })
+    admin_word: z.string().optional(),
+  }),
 })
 
 const memorials = defineCollection({
@@ -129,8 +142,8 @@ const memorials = defineCollection({
     name: z.string(),
     location: z.string(),
     status: z.enum(['active', 'inactive', 'planned']),
-    lang: z.enum(['', ...allLocales]).optional().default('')
-  })
+    lang: z.enum(['', ...allLocales]).optional().default(''),
+  }),
 })
 
 export const collections = { posts, about, fallen, memorials }

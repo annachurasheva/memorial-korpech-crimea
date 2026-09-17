@@ -50,7 +50,7 @@ const hasConsent = checkConsent()
     <>
       <div data-config={JSON.stringify(giscusConfig)} />
       <script>
-        let giscusContainer = null
+        let giscusContainer: HTMLElement | null = null
 
         function getThemeUrl() {
           const isDark = document.documentElement.classList.contains('dark')
@@ -64,7 +64,7 @@ const hasConsent = checkConsent()
             return
           }
 
-          const giscusWindow = giscusContainer.querySelector('iframe.giscus-frame')?.contentWindow
+          const giscusWindow = (giscusContainer.querySelector('iframe.giscus-frame') as HTMLIFrameElement)?.contentWindow
           if (!giscusWindow) {
             return
           }

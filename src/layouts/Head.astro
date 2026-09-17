@@ -196,30 +196,38 @@ const pageImage = new URL(`${base}/og/${postSlug ?? 'index'}.png`, Astro.url.ori
   />
 )}
 
-<!-- Яндекс.Метрика + Google Analytics с гейтом согласия -->
+<!-- Yandex.Metrika counter (SC-контур, счётчик 109911463) -->
 <script is:inline>
-  (function () {
-    // Яндекс.Метрика — без гейта (РФ-контур)
-    var mt = document.createElement('script');
-    mt.type = 'text/javascript'; mt.async = true;
-    mt.src = 'https://mc.yandex.ru/metrika/tag.js?ns=1';
-    document.head.appendChild(mt);
-    window.yaCounter112710769 = null;
-    window.Ya = window.Ya || {};
-    (function mtr(d, w, c, s, h, e) {
-      w[s] = w[s] || []; w[s].push({ id: 112710769, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
-      var n = d.getElementsByTagName('script')[0]; e = d.createElement('script'); e.async = true; e.src = mt.src; n.parentNode.insertBefore(e, n);
-      w[c] = w[c] || function () { (w[c].a = w[c].a || []).push(arguments); };
-    })(document, window, 'YaCounter112710769', 'yaParams');
-    // Google Analytics — ТОЛЬКО после согласия (трансграничная передача)
-    if (localStorage.getItem('mem-consent') === '1') {
-      var g = document.createElement('script'); g.async = true;
-      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-HXZMBB2CVJ';
-      document.head.appendChild(g);
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function () { dataLayer.push(arguments); };
-      gtag('js', new Date()); gtag('config', 'G-HXZMBB2CVJ');
+(function (m, e, t, r, i, k, a) {
+  m[i] = m[i] || function (...args) {
+    (m[i].a = m[i].a || []).push(...args)
+  }
+  m[i].l = 1 * new Date()
+  for (let j = 0; j < document.scripts.length; j++) {
+    if (document.scripts[j].src === r) {
+      return
     }
-  })();
+  }
+  k = e.createElement(t)
+  a = e.getElementsByTagName(t)[0]
+  k.async = 1
+  k.src = r
+  a.parentNode.insertBefore(k, a)
+})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109911463', 'ym')
+ym(109911463, 'init', {
+  ssr: true,
+  webvisor: true,
+  clickmap: true,
+  ecommerce: 'dataLayer',
+  referrer: document.referrer,
+  url: location.href,
+  accurateTrackBounce: true,
+  trackLinks: true,
+})
 </script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/109911463" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
 </head>

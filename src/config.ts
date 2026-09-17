@@ -14,7 +14,7 @@ export const themeConfig: ThemeConfig = {
     // author name
     author: 'Anna Churasheva',
     // site url
-    url: 'https://memorial-korpech-crimea.edgeone.dev',
+    url: 'https://mem-2026.sourcecraft.site/',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
@@ -22,7 +22,7 @@ export const themeConfig: ThemeConfig = {
     // recommended formats: svg, png or ico
     favicon: '/icons/favicon.svg', // or https://example.com/favicon.svg
     // author emails
-    emails: ['anna.churasheva@gmail.com', '79787883649@ya.ru'],
+    emails: ['annachurashevaoutlook@yandex.ru', '79787883649@ya.ru'],
   },
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
@@ -122,7 +122,7 @@ export const themeConfig: ThemeConfig = {
   // SEO SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   seo: {
     twitterID: '@Anna_Churasheva',
-    verification: { google: '8Btc90peyNYEBLjKS3oKpWTwWmYy_dSqqS_SubxSZr0', bing: '', yandex: '5e9b80a83d907f46', baidu: '' },
+    verification: { google: '', bing: '', yandex: '8dc1a37e92a5e0f1', baidu: '' },
     googleAnalyticsID: '',
     umamiAnalyticsID: '',
   },
@@ -134,11 +134,11 @@ export const themeConfig: ThemeConfig = {
     links: [
       {
         name: 'RSS',
-        url: '/atom.xml', // or /rss.xml
+        url: 'rss.xml', // or /atom.xml
       },
       {
-        name: 'GitHub',
-        url: 'https://github.com/annachurasheva/memorial-korpech-crimea',
+        name: 'Dzen',
+        url: 'https://dzen.ru/memorial_korpech_crimea',
       },
       {
         name: 'Email',
