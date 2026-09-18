@@ -27,25 +27,37 @@ export const GET: APIRoute = async ({ site, params }) => {
   <channel>
     <title>Мемориал павших — Memorial Korpech Crimea</title>
     <link>${siteUrl}${lang}/memorial/</link>
-    <description>Карточки павших героев. Восстановим справедливость, высечем их ИМЕНА на камне на вечно.</description>
+    <description>Документированные карточки павших в битве за Крым (1941–1942). Братское захоронение Корпечь, ныне с. Фронтовое: имена на камне — навечно.</description>
     <language>ru</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}${lang}/memorial/rss.xml" rel="self" type="application/rss+xml"/>
     ${sortedFallen.map((card) => {
-      const initials = card.data.person.middle_name
-        ? `${card.data.person.first_name[0]}.${card.data.person.middle_name[0]}.`
-        : `${card.data.person.first_name[0]}.`
+      const person = card.data.person
+      const burial = card.data.burial || {}
+      const initials = person.middle_name
+        ? `${person.first_name[0]}.${person.middle_name[0]}.`
+        : `${person.first_name[0]}.`
 
-      const description = `Герой ${card.data.person.last_name} ${initials}. Мемориал павших — восстановим справедливость, высечем его ИМЯ на камне на вечно.`
+      // Фильтр: упоминание "Корпечь" в любом из полей карточки
+      const recordText = JSON.stringify(card.data).toLowerCase()
+      const hasKorpech = recordText.includes('корпечь')
+
+      const tail = hasKorpech
+        ? 'идёт подготовка к увековечению на плитах.'
+        : 'уточнение деталей для внесения гравировок на мемориальные плиты.'
+
+      const description = `${person.last_name} ${initials} — павший в битве за Крым, локация Ак-Монайский перешеек, Керченский полуостров (1941–1942). Имя документировано ЦАМО; ${tail}`
+
       const link = `${siteUrl}${lang}/memorial/card/${card.data.slug}/`
-      const pubDate = new Date(card.data.person.death_date).toUTCString()
+      const stableId = `memorial-korpech-card-${card.data.slug}`
+      const pubDate = new Date(person.death_date).toUTCString()
 
       return `
     <item>
-      <title>${card.data.person.last_name} ${initials}</title>
+      <title>${person.last_name} ${initials}</title>
       <description>${description.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</description>
       <link>${link}</link>
-      <guid isPermaLink="true">${link}</guid>
+      <guid isPermaLink="false">${stableId}</guid>
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${siteUrl}images/cover-dzen-intro.jpg" length="13408" type="image/jpeg" />
     </item>`
