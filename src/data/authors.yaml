@@ -1,13 +1,25 @@
-# src/data/authors.yaml (наши данные, шаблон не трогает)
-- id: ak-monay
-  name: Поисковое сообщество Ак-Монай
-  type: сообщество          # персона | сообщество | музей | архив
-  credentials: ''           # для персон: «доцент, к.и.н.» и т.п.
-  link: /posts/poiskoviki/  # страница-дом автора
-  note: списки первичных захоронений выс. 66,3
-- id: docent-avtor
-  name: <ФИО>
+# src/data/authors.yaml · реестр авторов списков и материалов (R-26, R-27)
+- id: nevzorov-b-i
+  name: Б.И. Невзоров            # как в источнике; расшифровка — по вашему слову
   type: персона
   credentials: доцент
-  link: /posts/poiskoviki/
-  note: автор очерка «Май 1942-го…»
+  access: ''
+  license_note: ''
+  link: /poiskoviki/
+  note: автор очерка «Май 1942-го: Ак-Монай — Эникале» (К-07)
+- id: rsl
+  name: Российская государственная библиотека
+  type: библиотека
+  credentials: ''
+  access: публичный
+  license_note: материал публичен; условия лицензии сверены по карточке каталога
+  link: /poiskoviki/
+  note: источник справочных материалов
+- id: ak-monay
+  name: Поисковое сообщество Ак-Монай
+  type: сообщество
+  credentials: ''
+  access: ''
+  license_note: ''
+  link: /poiskoviki/
+  note: списки первичных захоронений выс. 66,3 (ждёт вашего подтверждения)
