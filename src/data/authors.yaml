@@ -1,0 +1,13 @@
+# src/data/authors.yaml (наши данные, шаблон не трогает)
+- id: ak-monay
+  name: Поисковое сообщество Ак-Монай
+  type: сообщество          # персона | сообщество | музей | архив
+  credentials: ''           # для персон: «доцент, к.и.н.» и т.п.
+  link: /posts/poiskoviki/  # страница-дом автора
+  note: списки первичных захоронений выс. 66,3
+- id: docent-avtor
+  name: <ФИО>
+  type: персона
+  credentials: доцент
+  link: /posts/poiskoviki/
+  note: автор очерка «Май 1942-го…»
