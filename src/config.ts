@@ -134,15 +134,15 @@ export const themeConfig: ThemeConfig = {
     links: [
       {
         name: 'RSS',
-        url: '/atom.xml', // or /rss.xml
+        url: '/rss.xml', // or /rss.xml
       },
       {
-        name: 'GitHub',
-        url: 'https://github.com/annachurasheva/memorial-korpech-crimea',
+        name: 'Дзен',
+        url: 'https://dzen.ru/memorial_korpech_crimea',
       },
       {
         name: 'Email',
-        url: '79787883649@ya.ru',
+        url: 't79787883649@gmail.com',
       },
       // {
       //   name: 'X',
