@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "edgeone-makers-mcp-server": {
+      "timeout": 600,
+      "command": "npx",
+      "args": ["@edgeone/makers-mcp@latest"],
+      "env": {
+        "EDGEONE_PAGES_API_TOKEN": "AXYOlYlLOBzvnFtAUOttIMwcmY74brlInxs5fXplk3I=",
+        "EDGEONE_PAGES_API_REGION": "global",
+        "EDGEONE_PAGES_PROJECT_NAME": "memorial-korpech-crimea"
+      }
+    }
+  }
+}

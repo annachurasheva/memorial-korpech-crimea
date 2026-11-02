@@ -13,9 +13,11 @@ const TOOL_NAME = process.argv[3] || 'account_info'
 const TOOL_ARGS = process.argv[4] ? JSON.parse(process.argv[4]) : {}
 
 const config = JSON.parse(readFileSync(CONFIG_PATH, 'utf8'))
-const server = config.servers[SERVER_KEY]
+// Поддержка обоих форматов: "mcpServers" (стандарт MCP-клиентов) и "servers" (старый формат)
+const servers = config.mcpServers ?? config.servers ?? {}
+const server = servers[SERVER_KEY]
 if (!server) {
-  console.error(`Сервер "${SERVER_KEY}" не найден в msp.json. Доступны: ${Object.keys(config.servers).join(', ')}`)
+  console.error(`Сервер "${SERVER_KEY}" не найден в msp.json. Доступны: ${Object.keys(servers).join(', ')}`)
   process.exit(1)
 }
 
