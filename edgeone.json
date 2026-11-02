@@ -1,5 +1,5 @@
 {
-  "name": "astro-blog",
+  "name": "memorial-korpech-crimea",
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install",
   "outputDirectory": "dist",

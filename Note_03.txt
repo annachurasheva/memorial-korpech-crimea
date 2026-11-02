@@ -1,0 +1,110 @@
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo ModifyHostsCertificate help                    
+USAGE
+    tccli teo ModifyHostsCertificate [--param...]
+
+OPTIONS
+    [help] [--cli-input-json] [--cli-unfold-argument] [--detail] [--endpoint] [--filter] [--generate-cli-skeleton] [--https-proxy] [--language] [--profile] [--region] [--request-client] [--role-arn] [--role-session-name] [--secretId] [--secretKey] [--timeout] [--token] [--use-cvm-role] [--version] [--waiter] [--warning] 
+
+AVAILABLE PARAMETERS
+--ZoneId (String | Required)
+--Hosts (Array of String | Required)
+--Mode (String | Optional)
+--ServerCertInfo (Array of ServerCertInfo | Optional)
+--ApplyType (String | Optional)
+--ClientCertInfo (MutualTLS | Optional)
+--UpstreamCertInfo (UpstreamCertInfo | Optional)
+
+OUTPUT PARAMETER
+RequestId -> (String)
+
+Use `tccli teo ModifyHostsCertificate help --detail` to see more information.
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo ApplyFreeCertificate help
+USAGE
+    tccli teo ApplyFreeCertificate [--param...]
+
+OPTIONS
+    [help] [--cli-input-json] [--cli-unfold-argument] [--detail] [--endpoint] [--filter] [--generate-cli-skeleton] [--https-proxy] [--language] [--profile] [--region] [--request-client] [--role-arn] [--role-session-name] [--secretId] [--secretKey] [--timeout] [--token] [--use-cvm-role] [--version] [--waiter] [--warning] 
+
+AVAILABLE PARAMETERS
+--ZoneId (String | Required)
+--Domain (String | Required)
+--VerificationMethod (String | Required)
+
+OUTPUT PARAMETER
+DnsVerification -> (DnsVerification)
+FileVerification -> (FileVerification)
+RequestId -> (String)
+
+Use `tccli teo ApplyFreeCertificate help --detail` to see more information.
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo CheckFreeCertificateVerification help
+USAGE
+    tccli teo CheckFreeCertificateVerification [--param...]
+
+OPTIONS
+    [help] [--cli-input-json] [--cli-unfold-argument] [--detail] [--endpoint] [--filter] [--generate-cli-skeleton] [--https-proxy] [--language] [--profile] [--region] [--request-client] [--role-arn] [--role-session-name] [--secretId] [--secretKey] [--timeout] [--token] [--use-cvm-role] [--version] [--waiter] [--warning] 
+
+AVAILABLE PARAMETERS
+--ZoneId (String | Required)
+--Domain (String | Required)
+
+OUTPUT PARAMETER
+CommonName -> (String)
+SignatureAlgorithm -> (String)
+ExpireTime -> (Timestamp)
+RequestId -> (String)
+
+Use `tccli teo CheckFreeCertificateVerification help --detail` to see more information.
+PS C:\astro-projects\memorial-korpech-crimea> 
+========
+ C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo DescribeAccelerationDomains --ZoneId zone-3oa5wkzm813i --Filters '[{"Name":"domain-name","Values":["info.roses-crimea.ru"]}]'
+[TencentCloudSDKException] code:UnauthorizedOperation message:操作无权限。 requestId:ddd22051-92ba-418c-a05e-643eaa7ee99c
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\site-packages\tccli\main.py", line 40, in main
+    CLICommand()()
+    ~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\site-packages\tccli\command.py", line 54, in __call__
+    return command_map[parsed_args.command](remaining, parsed_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\tccli\command.py", line 206, in __call__
+    return command_map[parsed_args.operation](remaining, parsed_globals)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\tccli\command.py", line 308, in __call__
+    return self._action_caller(action_parameters, vars(parsed_globals))
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\tccli\services\teo\teo_client.py", line 1314, in doDescribeAccelerationDomains
+    rsp = client.DescribeAccelerationDomains(model)
+  File "C:\Python313\Lib\site-packages\tencentcloud\teo\v20220901\teo_client.py", line 1907, in DescribeAccelerationDomains
+    body = self.call("DescribeAccelerationDomains", params, headers=headers)
+  File "C:\Python313\Lib\site-packages\tencentcloud\common\abstract_client.py", line 451, in call
+    return retryer.send_request(_call_once).content
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\tencentcloud\common\retry.py", line 15, in send_request
+    return fn()
+  File "C:\Python313\Lib\site-packages\tencentcloud\common\abstract_client.py", line 446, in _call_once
+    self._check_error(resp)
+    ~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python313\Lib\site-packages\tencentcloud\common\abstract_client.py", line 372, in _check_error
+    raise TencentCloudSDKException(code, message, reqid)
+tencentcloud.common.exception.tencent_cloud_sdk_exception.TencentCloudSDKException: [TencentCloudSDKException] code:UnauthorizedOperation message:操作无权限。 requestId:ddd22051-92ba-418c-a05e-643eaa7ee99c
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 116-121: character maps to <undefined>
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Python313\Scripts\tccli.exe\__main__.py", line 5, in <module>
+    sys.exit(main())
+  File "C:\Python313\Lib\site-packages\tccli\main.py", line 79, in main
+    log.error(e)
+Message: TencentCloudSDKException('UnauthorizedOperation', '操作无权限。', 'ddd22051-92ba-418c-a05e-643eaa7ee99c')
+Arguments: ()
+PS C:\astro-projects\memorial-korpech-crimea> 

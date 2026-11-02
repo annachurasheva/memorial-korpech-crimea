@@ -1,0 +1,311 @@
+ C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo help ApplyFreeCertificate
+usage: tccli [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To tccli help text, you can run:
+
+  tccli help
+  tccli configure help
+  tccli service[cvm] help
+  tccli service[cvm] action[RunInstances] help
+
+Unknown options: ApplyFreeCertificate
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo help CheckFreeCertificateVerification
+usage: tccli [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To tccli help text, you can run:
+
+  tccli help
+  tccli configure help
+  tccli service[cvm] help
+  tccli service[cvm] action[RunInstances] help
+
+Unknown options: CheckFreeCertificateVerification
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo help DescribeHostsSetting
+usage: tccli [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To tccli help text, you can run:
+
+  tccli help
+  tccli configure help
+  tccli service[cvm] help
+  tccli service[cvm] action[RunInstances] help
+
+Unknown options: DescribeHostsSetting
+PS C:\astro-projects\memorial-korpech-crimea> tccli --profile eo-sub teo DescribeHostsSetting --ZoneId zone-3oa5wkzm813i
+{
+    "DetailHosts": [
+        {
+            "ZoneId": "zone-3oa5wkzm813i",
+            "Status": "online",
+            "Host": "info.roses-crimea.ru",
+            "ZoneName": "default-pages-zone",
+            "Cname": "info.roses-crimea.ru.pages.dnsoe8.com.",
+            "Id": "edge-3wv49b4yc54n",
+            "InstanceId": "edge-3wv49b4yc54n",
+            "Lock": 0,
+            "Mode": 0,
+            "Area": "overseas",
+            "AccelerateType": {
+                "Switch": "on"
+            },
+            "Https": {
+                "Http2": "off",
+                "OcspStapling": "off",
+                "TlsVersion": [
+                    "TLSv1.2",
+                    "TLSv1.3"
+                ],
+                "Hsts": {
+                    "Switch": "off",
+                    "MaxAge": 0,
+                    "IncludeSubDomains": "off",
+                    "Preload": "off"
+                },
+                "CertInfo": [],
+                "ApplyType": "none",
+                "CipherSuite": "loose-v2023"
+            },
+            "CacheConfig": {
+                "Cache": {
+                    "Switch": "off",
+                    "CacheTime": 2592000,
+                    "IgnoreCacheControl": null
+                },
+                "NoCache": {
+                    "Switch": "off"
+                },
+                "FollowOrigin": {
+                    "Switch": "off",
+                    "DefaultCache": "on",
+                    "DefaultCacheStrategy": "on",
+                    "DefaultCacheTime": 0
+                }
+            },
+            "Origin": {
+                "Origins": [
+                    "0.0.0.1"
+                ],
+                "BackupOrigins": [],
+                "OriginPullProtocol": "follow",
+                "CosPrivateAccess": "off"
+            },
+            "SecurityType": {
+                "Switch": "on"
+            },
+            "CacheKey": {
+                "FullUrlCache": "on",
+                "IgnoreCase": "off",
+                "QueryString": {
+                    "Switch": "off",
+                    "Action": "includeCustom",
+                    "Value": []
+                }
+            },
+            "Compression": {
+                "Switch": "on",
+                "Algorithms": [
+                    "brotli",
+                    "gzip"
+                ]
+            },
+            "Waf": {
+                "Switch": "on",
+                "PolicyId": 2690701
+            },
+            "CC": {
+                "Switch": "on",
+                "PolicyId": 2690702
+            },
+            "DDoS": {
+                "Switch": "on"
+            },
+            "SmartRouting": null,
+            "Ipv6": {
+                "Switch": "off"
+            },
+            "ClientIpCountry": null
+        },
+        {
+            "ZoneId": "zone-3oa5wkzm813i",
+            "Status": "online",
+            "Host": "hono-template-twf6m6cr.edgeone.dev",
+            "ZoneName": "default-pages-zone",
+            "Cname": "hono-template-twf6m6cr.edgeone.dev.pages.dnsoe9.com.",
+            "Id": "edge-3odb6m2mx31j",
+            "InstanceId": "edge-3odb6m2mx31j",
+            "Lock": 0,
+            "Mode": 0,
+            "Area": "overseas",
+            "AccelerateType": {
+                "Switch": "on"
+            },
+            "Https": {
+                "Http2": "off",
+                "OcspStapling": "off",
+                "TlsVersion": [
+                    "TLSv1.2",
+                    "TLSv1.3"
+                ],
+                "Hsts": {
+                    "Switch": "off",
+                    "MaxAge": 0,
+                    "IncludeSubDomains": "off",
+                    "Preload": "off"
+                },
+                "CertInfo": [],
+                "ApplyType": "none",
+                "CipherSuite": "loose-v2023"
+            },
+            "CacheConfig": {
+                "Cache": {
+                    "Switch": "off",
+                    "CacheTime": 2592000,
+                    "IgnoreCacheControl": null
+                },
+                "NoCache": {
+                    "Switch": "off"
+                },
+                "FollowOrigin": {
+                    "Switch": "off",
+                    "DefaultCache": "on",
+                    "DefaultCacheStrategy": "on",
+                    "DefaultCacheTime": 0
+                }
+            },
+            "Origin": {
+                "Origins": [
+                    "0.0.0.1"
+                ],
+                "BackupOrigins": [],
+                "OriginPullProtocol": "follow",
+                "CosPrivateAccess": "off"
+            },
+            "SecurityType": {
+                "Switch": "on"
+            },
+            "CacheKey": {
+                "FullUrlCache": "on",
+                "IgnoreCase": "off",
+                "QueryString": {
+                    "Switch": "off",
+                    "Action": "includeCustom",
+                    "Value": []
+                }
+            },
+            "Compression": {
+                "Switch": "on",
+                "Algorithms": [
+                    "brotli",
+                    "gzip"
+                ]
+            },
+            "Waf": {
+                "Switch": "on",
+                "PolicyId": 2690701
+            },
+            "CC": {
+                "Switch": "on",
+                "PolicyId": 2690702
+            },
+            "DDoS": {
+                "Switch": "on"
+            },
+            "SmartRouting": null,
+            "Ipv6": {
+                "Switch": "off"
+            },
+            "ClientIpCountry": null
+        },
+        {
+            "ZoneId": "zone-3oa5wkzm813i",
+            "Status": "online",
+            "Host": "hono-template-aezfxwn191.edgeone.dev",
+            "ZoneName": "default-pages-zone",
+            "Cname": "hono-template-aezfxwn191.edgeone.dev.pages.dnsoe7.com.",
+            "Id": "edge-3odb6k8vlbf8",
+            "InstanceId": "edge-3odb6k8vlbf8",
+            "Lock": 0,
+            "Mode": 0,
+            "Area": "overseas",
+            "AccelerateType": {
+                "Switch": "on"
+            },
+            "Https": {
+                "Http2": "off",
+                "OcspStapling": "off",
+                "TlsVersion": [
+                    "TLSv1.2",
+                    "TLSv1.3"
+                ],
+                "Hsts": {
+                    "Switch": "off",
+                    "MaxAge": 0,
+                    "IncludeSubDomains": "off",
+                    "Preload": "off"
+                },
+                "CertInfo": [],
+                "ApplyType": "none",
+                "CipherSuite": "loose-v2023"
+            },
+            "CacheConfig": {
+                "Cache": {
+                    "Switch": "off",
+                    "CacheTime": 2592000,
+                    "IgnoreCacheControl": null
+                },
+                "NoCache": {
+                    "Switch": "off"
+                },
+                "FollowOrigin": {
+                    "Switch": "off",
+                    "DefaultCache": "on",
+                    "DefaultCacheStrategy": "on",
+                    "DefaultCacheTime": 0
+                }
+            },
+            "Origin": {
+                "Origins": [
+                    "0.0.0.1"
+                ],
+                "BackupOrigins": [],
+                "OriginPullProtocol": "follow",
+                "CosPrivateAccess": "off"
+            },
+            "SecurityType": {
+                "Switch": "on"
+            },
+            "CacheKey": {
+                "FullUrlCache": "on",
+                "IgnoreCase": "off",
+                "QueryString": {
+                    "Switch": "off",
+                    "Action": "includeCustom",
+                    "Value": []
+                }
+            },
+            "Compression": {
+                "Switch": "on",
+                "Algorithms": [
+                    "brotli",
+                    "gzip"
+                ]
+            },
+            "Waf": {
+                "Switch": "on",
+                "PolicyId": 2690701
+            },
+            "CC": {
+                "Switch": "on",
+                "PolicyId": 2690702
+            },
+            "DDoS": {
+                "Switch": "on"
+            },
+            "SmartRouting": null,
+            "Ipv6": {
+                "Switch": "off"
+            },
+            "ClientIpCountry": null
+        }
+    ],
+    "TotalNumber": 3,
+    "RequestId": "affc0397-28a2-4919-8296-6c3984a0f95d"
+}
+PS C:\astro-projects\memorial-korpech-crimea> 
