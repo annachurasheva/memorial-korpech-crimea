@@ -142,6 +142,42 @@ node scripts/mcp-account-info.mjs edgeone-makers-mcp-server account_info
 
 ---
 
+## 7. Корневая причина «Not logged in» — обновление от 2026-11-02 23:20
+
+С новым токеном и регионом `global` MCP по-прежнему отвечает
+`Not logged in`. Прямой запрос к API выявил корневую причину:
+
+| Эндпоинт | Результат |
+|---|---|
+| `https://pages-api.edgeone.ai/v1` (global) | **HTTP 567** — HTML-страница `AccessDeny / Restricted Access` («The security policy of this website has blocked…») — запрос блокирует WAF/security policy EdgeOne по IP клиента, а не по токену |
+| `https://pages-api.cloud.tencent.com/v1` (china) | HTTP 200, `Code 109: The Token usage region is incorrect` — токен валиден, но привязан к глобальному региону |
+
+Выводы:
+
+1. **Токен действителен** — китайский эндпоинт распознал его и сообщил только
+   о несоответствии региона.
+2. **Токен в msp.json настроен верно** (`mcpServers`, регион `global`).
+3. **Проблема — сетевая**: глобальный API `pages-api.edgeone.ai` блокирует
+   запросы с текущего IP (security policy / гео-ограничение). User-Agent не
+   влияет (проверено). MCP-сервер и CLI в такой ситуации честно отвечают
+   «Not logged in».
+
+Варианты решения:
+
+- **A. Прокси/VPN** с IP из разрешённого региона (например, Гонконг/Сингапур).
+  Для CLI/MCP задать `HTTPS_PROXY` в окружении (axios в Node читает
+  `HTTPS_PROXY`/`HTTP_PROXY` автоматически) — добавить в `env` в `msp.json`,
+  например: `"HTTPS_PROXY": "http://127.0.0.1:<порт>"`.
+- **B. Китайский аккаунт EdgeOne** (`edgeone.cloud.tencent.com`) — если проект
+  может работать на площадке `ap-guangzhou`; тогда создать токен на китайской
+  площадке и поставить `"EDGEONE_PAGES_API_REGION": "china"`. VPN не нужен
+  (эндпоинт `pages-api.cloud.tencent.com` доступен напрямую).
+- **C. Продолжить без EdgeOne Pages API** — деплой/проверки через `tccli`
+  (профиль `eo-sub`) и другие каналы; MCP-инструменты `account_info` /
+  `deploy_folder` останутся недоступными из этой сети.
+
+---
+
 ## 6. Сверка дописки (ниже) с результатами диагностики (2026-11-02)
 
 | Пункт дописки | Результат проверки в этой среде |
