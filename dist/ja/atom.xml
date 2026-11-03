@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/feeds/atom-style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mem-2026.sourcecraft.site//ja/</id>
+    <title>Мемориал Корпечь, Крым</title>
+    <updated>2026-09-17T22:25:11.037Z</updated>
+    <generator>Astro-Theme-Retypeset with Feed for Node.js</generator>
+    <author>
+        <name>Anna Churasheva</name>
+        <uri>https://mem-2026.sourcecraft.site//</uri>
+    </author>
+    <link rel="alternate" href="https://mem-2026.sourcecraft.site//ja/"/>
+    <link rel="self" href="https://mem-2026.sourcecraft.site/ja/atom.xml"/>
+    <subtitle>Списки павших. Крым Фронт 1-1942</subtitle>
+    <rights>Copyright © 2026 Anna Churasheva</rights>
+</feed>

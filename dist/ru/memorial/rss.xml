@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Мемориал павших — Memorial Korpech Crimea</title>
+    <link>https://mem-2026.sourcecraft.site/ru/memorial/</link>
+    <description>Карточки павших героев. Восстановим справедливость, высечем их ИМЕНА на камне на вечно.</description>
+    <language>ru</language>
+    <lastBuildDate>Thu, 17 Sep 2026 22:25:11 GMT</lastBuildDate>
+    <atom:link href="https://mem-2026.sourcecraft.site/ru/memorial/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Ломанов И.А.</title>
+      <description>Герой Ломанов И.А.. Мемориал павших — восстановим справедливость, высечем его ИМЯ на камне на вечно.</description>
+      <link>https://mem-2026.sourcecraft.site/ru/memorial/card/lomanov-i-a-551267196/</link>
+      <guid isPermaLink="true">https://mem-2026.sourcecraft.site/ru/memorial/card/lomanov-i-a-551267196/</guid>
+      <pubDate>Sat, 21 Mar 1942 00:00:00 GMT</pubDate>
+      <enclosure url="https://mem-2026.sourcecraft.site/images/cover-dzen-intro.jpg" length="13408" type="image/jpeg" />
+    </item>
+    <item>
+      <title>Бадалов Г.И.</title>
+      <description>Герой Бадалов Г.И.. Мемориал павших — восстановим справедливость, высечем его ИМЯ на камне на вечно.</description>
+      <link>https://mem-2026.sourcecraft.site/ru/memorial/card/badalov-g-i-551267195/</link>
+      <guid isPermaLink="true">https://mem-2026.sourcecraft.site/ru/memorial/card/badalov-g-i-551267195/</guid>
+      <pubDate>Thu, 19 Mar 1942 00:00:00 GMT</pubDate>
+      <enclosure url="https://mem-2026.sourcecraft.site/images/cover-dzen-intro.jpg" length="13408" type="image/jpeg" />
+    </item>
+    <item>
+      <title>Мухин А.А.</title>
+      <description>Герой Мухин А.А.. Мемориал павших — восстановим справедливость, высечем его ИМЯ на камне на вечно.</description>
+      <link>https://mem-2026.sourcecraft.site/ru/memorial/card/mukhin-a-a-551267199/</link>
+      <guid isPermaLink="true">https://mem-2026.sourcecraft.site/ru/memorial/card/mukhin-a-a-551267199/</guid>
+      <pubDate>Thu, 19 Mar 1942 00:00:00 GMT</pubDate>
+      <enclosure url="https://mem-2026.sourcecraft.site/images/cover-dzen-intro.jpg" length="13408" type="image/jpeg" />
+    </item>
+  </channel>
+</rss>

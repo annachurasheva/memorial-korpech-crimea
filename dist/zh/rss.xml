@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/feeds/rss-style.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Мемориал Корпечь, Крым</title>
+        <link>https://mem-2026.sourcecraft.site//zh/</link>
+        <description>Списки павших. Крым Фронт 1-1942</description>
+        <lastBuildDate>Thu, 17 Sep 2026 22:25:12 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Astro-Theme-Retypeset with Feed for Node.js</generator>
+        <language>zh</language>
+        <copyright>Copyright © 2026 Anna Churasheva</copyright>
+        <atom:link href="https://mem-2026.sourcecraft.site/zh/rss.xml" rel="self" type="application/rss+xml"/>
+    </channel>
+</rss>

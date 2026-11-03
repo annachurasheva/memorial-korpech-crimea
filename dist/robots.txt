@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /~partytown/
+
+Sitemap: https://mem-2026.sourcecraft.site/sitemap-index.xml
