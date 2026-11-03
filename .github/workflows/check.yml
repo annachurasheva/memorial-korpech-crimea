@@ -1,0 +1,23 @@
+name: Check EdgeOne Permissions
+
+on:
+  workflow_dispatch: # Запуск только вручную из вкладки Actions
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Permission Check
+        run: |
+          npx eo-maker-deploy check-permissions \
+            --secret-id ${{ secrets.TENCENT_SECRET_ID }} \
+            --secret-key ${{ secrets.TENCENT_SECRET_KEY }} \
+            --maker-api-token ${{ secrets.EDGEONE_MAKER_API_TOKEN }}
