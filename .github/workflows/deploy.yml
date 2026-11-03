@@ -1,8 +1,7 @@
 name: Deploy and Auto-SSL to EdgeOne
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: # Запуск только вручную из вкладки Actions
 
 jobs:
   deploy:
