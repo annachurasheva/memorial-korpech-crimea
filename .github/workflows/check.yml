@@ -13,13 +13,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24.5.0' # Указали вашу версию
+          node-version: '24.5.0'
 
       - name: Run Permission Check
         env:
-          # Передаем секреты через переменные окружения, это надежнее
+          # Передаем секреты как переменные окружения
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
           EDGEONE_MAKER_API_TOKEN: ${{ secrets.EDGEONE_MAKER_API_TOKEN }}
         run: |
-          npx eo-maker-deploy check-permissions
+          npx eo-maker-deploy check-permissions --verbose
